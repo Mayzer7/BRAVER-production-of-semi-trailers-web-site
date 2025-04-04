@@ -59,37 +59,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Всплывающие модальное окно "Заказать звонок"
-    const modal = document.getElementById("modal");
-    const openModalBtn = document.querySelector(".contact-button");
-    const closeModalBtn = document.querySelector(".close");
+    // Функция для управления конкретным модальным окном
+    function setupModal(modalId, buttonClass) {
+        const modal = document.getElementById(modalId);
+        const openModalBtn = document.querySelector(`.${buttonClass}`);
+        
+        if (!modal || !openModalBtn) return;
 
-    if (modal) {
-        modal.style.display = "none"; 
-    }
+        const closeModalBtn = modal.querySelector(".close");
 
-    if (openModalBtn) {
         openModalBtn.addEventListener("click", () => {
             modal.style.display = "flex";
         });
-    }
 
-    if (closeModalBtn) {
         closeModalBtn.addEventListener("click", () => {
             modal.style.display = "none";
         });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
     }
 
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    // Подключаем разные кнопки к своим окнам
+    setupModal("modal-call", "contact-button"); // "Заказать звонок"
+    setupModal("modal-req", "request-button");  // "Оставить заявку"
 
-    const checkbox = document.querySelector(".accept-input");
-    const checkboxIcon = document.querySelector(".checkbox-icon");
+    // Чекбоксы для каждого окна
+    document.querySelectorAll(".custom-checkbox").forEach((checkboxContainer) => {
+        const checkbox = checkboxContainer.querySelector(".accept-input");
+        const checkboxIcon = checkboxContainer.querySelector(".checkbox-icon");
 
-    if (checkbox && checkboxIcon) {
+        if (!checkbox || !checkboxIcon) return;
+
         checkboxIcon.addEventListener("click", (event) => {
             event.preventDefault(); 
 
@@ -99,13 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const unchecked = checkboxIcon.querySelector(".unchecked");
             const checked = checkboxIcon.querySelector(".checked");
 
-            if (checkbox.checked) {
-                unchecked.style.display = "none";
-                checked.style.display = "block";
-            } else {
-                unchecked.style.display = "block";
-                checked.style.display = "none";
-            }
+            unchecked.style.display = checkbox.checked ? "none" : "block";
+            checked.style.display = checkbox.checked ? "block" : "none";
         });
-    }
+    });
 });

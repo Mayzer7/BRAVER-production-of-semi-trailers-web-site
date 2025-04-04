@@ -82,7 +82,7 @@
                 </div>
         
                 <div class="submit-app">
-                    <a href="#" class="submit-button">Оставить заявку</a>
+                    <a href="#" class="request-button">Оставить заявку</a>
                     <a href="#" class="arrow-link">
                         <img src="../styles/images/svg/arrow-bg-white.svg" alt="стрелочка">
                     </a>
@@ -91,7 +91,8 @@
         </div>
     </section>
 
-    <div id="modal" class="modal">
+    <!-- Всплывающее Модальное окно "Заказать звонок" -->
+    <div id="modal-call" class="modal">
         <div class="modal-content">
             <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
             <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
@@ -99,6 +100,39 @@
             <div class="modal-inputs">
                 <input type="text" placeholder="+7 (___) ___-__-__">
                 <input type="text" placeholder="Название компании">
+            </div>
+            <label class="custom-checkbox">
+                <input type="checkbox" class="accept-input" hidden>
+                
+                <span class="checkbox-icon">
+                    <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                    <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                </span>
+
+                <div class="checkbox-text">
+                    Нажимая на кнопку, я принимаю условия <strong>Политики<br> конфиденциальности</strong>
+                </div>
+            </label>
+            <div class="submit-modal">
+                <a href="#" class="submit-button-modal">Отправить</a>
+                <a href="#" class="arrow-link-modal">
+                    <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Оставить заявку" -->
+    <div id="modal-req" class="modal-req">
+        <div class="modal-content-req">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
+            <p>Оставьте Ваши данные, и мы свяжемся с вами в течение 15 минут</p>
+            <div class="modal-inputs-req">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="+7 (___) ___-__-__">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Ваш комментарий"></textarea>
             </div>
             <label class="custom-checkbox">
                 <input type="checkbox" class="accept-input" hidden>

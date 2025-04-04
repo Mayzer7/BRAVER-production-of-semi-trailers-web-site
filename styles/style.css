@@ -385,8 +385,195 @@ body {
 .arrow-link {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .arrow-link img {
     transition: transform 0.3s ease;
 }
+
+
+
+/* Всплывающие модальное окно при нажатии на кнопку "Заказать звонок" */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: rgba(244, 244, 244, 1);    
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 400px;  
+    max-width: 90vw;   
+    width: auto;       
+    position: relative;
+    color: black;
+    display: flex;
+    flex-direction: column; 
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: rgba(123, 123, 123, 1);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.modal-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.modal-inputs input {
+    flex: 1; 
+    min-width: 253px;
+    min-height: 46px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f5f5f5; 
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.modal-inputs input::placeholder {
+    font-weight: 500;
+}
+
+.modal-inputs input:focus {
+    border-color: #333;
+    background: #e9e9e9;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center; 
+    font-size: 16px; 
+    margin-top: 10px; 
+}
+
+.accept-input {
+    font-size: 100px;
+}
+
+
+.checkbox-icon {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-icon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.unchecked {
+    display: block;
+}
+
+.checked {
+    display: none;
+}
+
+.accept-input:checked ~ .checkbox-icon .unchecked {
+    display: none;
+}
+
+.accept-input:checked ~ .checkbox-icon .checked {
+    display: block;
+}
+
+.checkbox-text {
+    margin-left: 10px;  
+    font-size: 16px;    
+    white-space: nowrap; 
+    line-height: 1.5;   
+    text-align: left;   
+    margin-top: 5px;    
+}
+
+.submit-modal {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.submit-button-modal {
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+    padding: 12px 68px;
+    background-color: rgba(32, 32, 32, 1);
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-link-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-link-modal img {
+    transition: transform 0.3s ease;
+}
+
+
+/* Кнопка закрытия модального окна */
+.close {
+    position: absolute;
+    top: -30px;  
+    right: -40px; 
+    font-size: 24px;
+    color: white; 
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+

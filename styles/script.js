@@ -32,13 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
             // Закрытие всех остальных меню
             document.querySelectorAll(".nav-item").forEach(item => {
                 item.classList.remove("active");
+                item.querySelector(".dropdown").style.display = "none"; // Скрываем все открытые меню
             });
 
+            // Открытие текущего меню, если оно не активно
             if (!isActive) {
                 parent.classList.add("active");
-                dropdown.style.display = "block"; 
+                dropdown.style.display = "block";  // Отображаем текущие подкатегории
             } else {
-                dropdown.style.display = "none";
+                dropdown.style.display = "none";  // Скрываем, если уже открыто
             }
         });
     });
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!event.target.closest(".nav-item") && !event.target.closest(".burger")) {
             document.querySelectorAll(".nav-item").forEach(item => {
                 item.classList.remove("active");
-                item.querySelector(".dropdown").style.display = "none"; 
+                item.querySelector(".dropdown").style.display = "none"; // Закрываем меню
             });
         }
     });

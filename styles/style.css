@@ -171,7 +171,7 @@ body {
 
 .nav-item:hover .dot {
     color: black;
-}
+}   
 
 /* Контакты */
 
@@ -333,4 +333,60 @@ body {
         border-radius: 12px;
         z-index: 99;
     }
+}
+
+/* Контент на странице */
+
+.main-page-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 60px; 
+    left: 20px;   
+}
+
+.title {
+    font-size: 78px;
+    color: white;
+    font-weight: 400;  
+}
+
+.subtitle {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    color: white;  
+    font-weight: 400; 
+}
+
+
+.submit-app {
+    display: flex;
+    align-items: center;
+}
+
+.submit-button {
+    width: 282px;
+    height: 48px;
+    padding: 12px 68px;
+    background-color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-link {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-link img {
+    transition: transform 0.3s ease;
 }

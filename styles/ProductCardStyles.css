@@ -411,9 +411,6 @@ body {
 }
 
 
-
-
-
 /* ОПИСАНИЕ ТОВАРА */
 
 /* Левая часть */
@@ -422,6 +419,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .product-info-left {
@@ -662,3 +660,99 @@ body {
 .arrow-link img {
     transition: transform 0.3s ease;
 }
+
+
+/* ИНФОРМАЦИЯ О ДОСТАВКЕ */
+
+.divider {
+    border: none; 
+    height: 1px; 
+    background-color: rgba(229, 229, 229, 1); 
+    margin: 0; 
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+  
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+  
+.accordion-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: relative;
+}
+  
+.number {
+    font-size: 32px;
+    color: #7B7B7B;
+    flex-shrink: 0;
+}
+  
+.title {
+    font-size: 36px;
+    font-weight: 400;
+    color: #202020;
+    margin-left: 228px; 
+    flex-grow: 1;
+}
+  
+.toggle-btn {
+    background: none; 
+    border: none;
+    padding: 0; 
+    cursor: pointer;
+}
+  
+.arrow-closed {
+    display: block; 
+}
+  
+.arrow-open {
+    display: none; 
+}
+  
+.accordion-content {
+    padding: 0 16px 16px 80px;
+    display: none;
+    margin-left: 200px;
+}
+
+.accordion-content p {
+    margin-bottom: 10px;
+    color: rgba(123, 123, 123, 1);
+}
+
+.accordion-content p strong {
+    font-weight: 600;
+    color: rgba(32, 32, 32, 1);
+}
+  
+.accordion-item.active .accordion-content {
+    display: block;
+}
+  
+.accordion-content ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    color: rgba(123, 123, 123, 1);
+}
+  
+.accordion-item.active .arrow-closed {
+    display: none; 
+}
+  
+.accordion-item.active .arrow-open {
+    display: block; 
+}
+  
+
+  

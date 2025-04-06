@@ -118,4 +118,34 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add('active');
         });
     });
+
+
+    
+
+    
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        const toggleBtn = item.querySelector(".toggle-btn");
+        const content = item.querySelector(".accordion-content");
+
+        // При клике на заголовок или кнопку, скрываем или показываем контент
+        header.addEventListener("click", function() {
+        item.classList.toggle("active");
+
+        // Переключаем состояние стрелочек
+        const arrowClosed = toggleBtn.querySelector(".arrow-closed");
+        const arrowOpen = toggleBtn.querySelector(".arrow-open");
+
+        if (item.classList.contains("active")) {
+            arrowClosed.style.display = "none"; // Скрыть стрелку закрытого состояния
+            arrowOpen.style.display = "block"; // Показать стрелку открытого состояния
+        } else {
+            arrowClosed.style.display = "block"; // Показать стрелку закрытого состояния
+            arrowOpen.style.display = "none"; // Скрыть стрелку открытого состояния
+        }
+        });
+    });
+    
 });

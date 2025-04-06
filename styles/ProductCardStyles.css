@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./fonts/HelveticaNeue-Light.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+/* NAVBAR */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(32, 32, 32, 1);
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img {
+    width: 117px;
+    height: 44px;
+}
+
+.logo span {
+    font-weight: 400;
+    color: white;
+}
+
+.logo-link {
+    text-decoration: none; 
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    gap: 15px;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item.active > a,
+.nav-item.active > a:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav-item.active .dot {
+    color: black;
+}
+
+.nav-item .dropdown {
+    display: none;
+}
+
+.nav-item.active .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    min-width: 200px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.dropdown a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background-color: black;
+    color: white;
+}
+
+.dropdown[style="display: block;"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.dot {
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-item > a:hover,
+.nav > a:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav-item:hover .dot {
+    color: black;
+}   
+
+/* Контакты */
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-button {
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* Выбор языка */
+
+.lang-switcher {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 12px;
+}
+
+.lang-button {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    border: none; 
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    flex: 1; 
+    border-radius: 12px; 
+}
+
+.lang-button.active {
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 1); 
+    color: black;
+}
+
+.lang-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Бургер меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Адаптивность мод низкие разрешения */
+@media (max-width: 1335px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .nav.active {
+        right: 0;
+        background: white;
+        color: black;
+    }
+    
+    .nav.active a {
+        color: black;
+    }
+    
+    .nav.active .dropdown a {
+        color: black;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav.active .dropdown a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: static;
+        width: 100%;
+        margin-top: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0;
+    }
+
+    .dropdown a {
+        color: white;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .contact.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 12px;
+        z-index: 99;
+    }
+}
+
+/* Изображения товара */
+
+.product-card {
+    width: 100%;
+    padding: 80px 20px; 
+}
+
+.product-images {
+    display: flex; 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.product-image {
+    background-color: rgba(244, 244, 244, 1);
+    border-radius: 8px; 
+    overflow: hidden; 
+    padding: 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex: 1; 
+    width: 770px; 
+    height: 621px; 
+    position: relative;
+}
+
+.arrow-button {
+    display: inline-block; 
+    cursor: pointer; 
+    padding: 10px; 
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.arrow-container-left {
+    position: absolute; 
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 10; 
+}
+
+.arrow-container-right {
+    position: absolute; 
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 10; 
+}
+
+.product-image img {
+    width: 585px; 
+    height: 352px; 
+    object-fit: contain; 
+    border-radius: 8px; 
+}
+
+.video-img {
+    min-width: 706px; 
+    min-height: 425px; 
+    width: 100%;
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 8px;
+}
+
+/* Кнопка проигрывания */
+.play-button-container {
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 15; 
+    cursor: pointer; 
+    background-color: rgba(255, 255, 255, 0.6); 
+    border-radius: 50%;
+    width: 99px; 
+    height: 99px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}

@@ -106,5 +106,5 @@ document.addEventListener("DOMContentLoaded", () => {
             unchecked.style.display = checkbox.checked ? "none" : "block";
             checked.style.display = checkbox.checked ? "block" : "none";
         });
-    });
+    });    
 });

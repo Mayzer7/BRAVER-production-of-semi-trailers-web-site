@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/ProductCardStyles.css">
+    <title>BRAVER production - Карточка товара</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../pages/MainPage.html" class="logo-link">
+                <img src="../styles/images/LogoBraver.png" alt="Логотип">
+            </a>
+            <span>Производство<br>полуприцепов</span>
+        </div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav">
+            <div class="nav-item">
+                <a href="#" class="catalog-btn">Каталог <span class="dot">•</span></a>
+                <div class="dropdown">
+                    <a href="../pages/ProductCard.html">Зерновозы</a>
+                    <a href="#">Полуприцепы</a>
+                    <a href="#">Самосвалы</a>
+                    <a href="#">Фургоны</a>
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#">О заводе <span class="dot">•</span></a>
+                <div class="dropdown">
+                    <a href="#">История</a>
+                    <a href="#">Производство</a>
+                </div>
+            </div>
+        
+            <a href="#">Техника в наличии</a>
+            
+            <div class="nav-item">
+                <a href="#">Сервис и гарантия <span class="dot">•</span></a>
+                <div class="dropdown">
+                    <a href="#">Отзывы</a>
+                    <a href="#">Гарантийное обслуживание</a>
+                    <a href="#">Доставка</a>
+                    <a href="#">Документы и сертификаты</a>
+                    <a href="#">Сервисные центры</a>
+                </div>
+            </div>
+        
+            <div class="nav-item">
+                <a href="#">Покупателям <span class="dot">•</span></a>
+                <div class="dropdown">
+                    <a href="#">Лизинг</a>
+                    <a href="#">Кредит</a>
+                </div>
+            </div>
+        
+            <a href="#">Контакты</a>
+        </nav>
+        <div class="contact">
+            <span>8 (900) 777-77-77</span>
+            <button class="contact-button">Заказать звонок</button>
+            <div class="lang-switcher">
+                <button class="lang-button active" data-lang="ru">RU</button>
+                <button class="lang-button" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-card">
+        <div class="product-images">
+            <div class="product-image">
+                <!-- Стрелка влево -->
+                <button class="arrow-button arrow-left">
+                    <div class="arrow-container-left">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#202020"/>
+                            <path d="M27 17.3047L21.4882 22.8165C20.8373 23.4674 20.8373 24.5326 21.4882 25.1835L27 30.6953" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </button>
+    
+                <img src="../styles/images/Trailer.png" alt="Trailer">
+            </div>
+        
+            <div class="product-image">
+                <!-- Стрелка вправо -->
+                <button class="arrow-button arrow-right">
+                    <div class="arrow-container-right">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="24" fill="#202020"/>
+                            <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </div>
+                </button>
+    
+                <img class="video-img" src="../styles/images/TrailerVideo.png" alt="Trailer Video">
+            
+                <!-- Кнопка проигрывания -->
+                <div class="play-button-container">
+                    <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 9.26795C19.3333 10.0377 19.3333 11.9623 18 12.7321L3 21.3923C1.66666 22.1621 -1.05781e-06 21.1999 -9.90511e-07 19.6603L-2.33408e-07 2.33975C-1.6611e-07 0.800144 1.66667 -0.162106 3 0.607695L18 9.26795Z" fill="#202020"/>
+                    </svg>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <script src="../styles/script.js"></script>
+</body>
+</html>

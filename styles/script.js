@@ -106,5 +106,16 @@ document.addEventListener("DOMContentLoaded", () => {
             unchecked.style.display = checkbox.checked ? "none" : "block";
             checked.style.display = checkbox.checked ? "block" : "none";
         });
-    });    
+    });
+    
+    
+
+    const items = document.querySelectorAll('.tech-settings');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+        items.forEach(el => el.classList.remove('active'));
+        item.classList.add('active');
+        });
+    });
 });

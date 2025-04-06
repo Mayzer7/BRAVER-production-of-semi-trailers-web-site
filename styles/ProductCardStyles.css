@@ -325,7 +325,7 @@ body {
     }
 }
 
-/* Изображения товара */
+/* ИЗОБРАЖЕНИЕ ТОВАРА */
 
 .product-card {
     width: 100%;
@@ -409,3 +409,135 @@ body {
     justify-content: center;
     align-items: center; 
 }
+
+/* ОПИСАНИЕ ТОВАРА */
+
+.product-info-left {
+    width: 1034px; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.breadcrumbs {
+    color: #999;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 20px 0;
+    font-weight: 400;
+}
+  
+.breadcrumbs a {
+    text-decoration: none;
+    color: #999;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+  
+.breadcrumbs a:hover {
+    color: #000;
+}
+  
+.breadcrumbs span {
+    color: #999;
+}
+  
+.breadcrumbs .current {
+    color: #222;
+    font-weight: 500;
+}
+  
+.product-title {
+    font-size: 48px;
+    color: rgba(32, 32, 32, 1);
+    font-weight: 600;
+}
+
+.product-about {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(32, 32, 32, 1);
+    margin-bottom: 16px;
+}
+
+.product-description {
+    color: rgba(123, 123, 123, 1);
+}
+
+.desc-two {
+    margin-top: 10px;
+}
+
+.product-card-image {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.product-card-image img {
+    width: 1034px;
+    height: 402px;
+}
+
+.choice-settings-navbar {
+    display: flex;
+    background-color: rgba(244, 244, 244, 1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+  
+.tech-settings {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.tech-settings .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(32, 32, 32, 0.4);
+}
+  
+.tech-settings span {
+    color: rgba(123, 123, 123, 1);
+    font-weight: 600;
+    font-size: 20px;
+}
+  
+.tech-settings.active {
+    background-color: black;
+    border-radius: 8px;
+}
+  
+.tech-settings.active .dot {
+    background-color: white;
+}
+  
+.tech-settings.active span {
+    color: white;
+}
+
+
+.first-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+  
+.settings-name {
+    text-align: left;
+}
+  
+.settings-value {
+    text-align: right;
+}
+
+  

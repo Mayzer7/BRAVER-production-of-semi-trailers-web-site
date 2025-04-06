@@ -410,7 +410,19 @@ body {
     align-items: center; 
 }
 
+
+
+
+
 /* ОПИСАНИЕ ТОВАРА */
+
+/* Левая часть */
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
 .product-info-left {
     width: 1034px; 
@@ -425,7 +437,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    padding: 20px 0;
+    margin-bottom: 20px;
     font-weight: 400;
 }
   
@@ -525,19 +537,128 @@ body {
     color: white;
 }
 
+.choice-settings-container {
+    background-color: rgba(244, 244, 244, 1);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 20px;
+}
 
-.first-info {
+.choise-settings-desc {
+    padding: 10px
+}
+
+.settings-info {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
   
 .settings-name {
     text-align: left;
+    color: black;
+    font-size: 20px;
 }
   
 .settings-value {
     text-align: right;
+    color: rgba(123, 123, 123, 1);
+    font-size: 20px;
 }
 
+.settings-line {
+    border-bottom: 1px solid #e0e0e0; 
+    margin-top: 20px; 
+}
+
+
+/* Правая часть */
+
+.product-info-right {
+    width: 507px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
   
+.product-info-card {
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+  
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 20px;
+    color: rgba(123, 123, 123, 1);
+}
+  
+.info-row.no-border {
+    border-bottom: none;
+}
+  
+.cost {
+    font-size: 32px;
+    font-weight: 500;
+    color: #202020;
+}
+  
+.tech-link {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #202020;
+    font-size: 16px;
+}
+  
+.submit-app {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.request-button {
+    flex: 1;
+    width: 282px;
+    height: 48px;
+    padding: 12px 68px;
+    background-color: rgba(32, 32, 32, 1);
+    border: none;
+    text-align: center;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.get-consultation {
+    flex: 1;
+    width: 282px;
+    height: 48px;
+    padding: 12px 68px;
+    background-color: rgba(244, 244, 244, 1);
+    border: none;
+    text-align: center;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-link img {
+    transition: transform 0.3s ease;
+}

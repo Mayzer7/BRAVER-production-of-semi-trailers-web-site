@@ -755,4 +755,147 @@ body {
 }
   
 
+
+
+/* МОЖЕТ БЫТЬ ИНТЕРЕСНО */
+
+.might-be-interesting {
+    margin-top: 140px;
+}
+
+.might-be-interesting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.might-be-interesting-header h1 {
+    font-size: 48px;
+    color: #000;
+}
+
+.might-be-interesting-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.might-be-interesting-cards {
+    margin-top: 38px;
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.might-be-interesting-card {
+    width: calc(33.33% - 20px); 
+    height: auto; 
+    min-width: 300px; 
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card-top {
+    position: relative; 
+    width: 100%;
+    height: 325px;
+    background-color: rgba(244, 244, 244, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.card-first-img {
+    width: 292px;
+    height: 242px;
+    object-fit: contain;
+}
+
+.card-second-img {
+    width: 356px;
+    height: 215px;
+    object-fit: contain;
+}
+
+.card-last-img {
+    width: 311px;
+    height: 239px;
+    object-fit: contain;
+}
+
+.availability {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    background-color: rgba(255, 255, 255, 1); 
+    color: rgba(32, 32, 32, 1); 
+    padding: 8px; 
+    font-size: 14px; 
+    border-radius: 6px; 
+    font-weight: 600;
+}
+
+.card-content {
+    text-align: left;
+}
   
+.card-content h1 {
+    font-size: 20px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    color: rgba(32, 32, 32, 1);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+  
+.divider2 {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 8px 0;
+}
+  
+.specs {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+  
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec-row span {
+    color: rgba(123, 123, 123, 1);
+}
+
+.price {
+    color: rgba(32, 32, 32, 1);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .might-be-interesting-cards {
+        gap: 10px; 
+    }
+
+    .might-be-interesting-card {
+        width: calc(50% - 10px);
+        min-width: 0;
+    }
+}
+

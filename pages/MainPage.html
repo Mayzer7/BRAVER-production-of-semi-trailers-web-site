@@ -10,7 +10,7 @@
     <section class="main-page">
         <header class="header">
             <div class="logo">
-                <a href="#" class="logo-link">
+                <a href="../pages/MainPage.html" class="logo-link">
                     <img src="../styles/images/LogoBraver.png" alt="Логотип">
                 </a>
                 <span>Производство<br>полуприцепов</span>
@@ -153,6 +153,32 @@
                     </a>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- модальное окно при успешной отправки формы -->
+    <div id="modal-success" class="modal">
+        <div class="modal-content-success">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <img class="like" src="../styles/images/Like.png" alt="">
+            <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
+            <p>Наш менеджер свяжется с Вами в течение 15 минут</p>
+            <div class="submit-modal-success">
+                <a href="#" class="submit-button-modal-success">Закрыть</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно ошибки -->
+    <div id="modal-error" class="modal">
+        <div class="modal-content-error">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <img class="error" src="../styles/images/Error.png" alt="">
+            <h2>ЧТО-ТО ПОШЛО НЕ ТАК</h2>
+            <p>Попробуйте отправить заявку еще раз</p>
+            <div class="submit-modal-error">
+                <a href="#" class="submit-button-modal-error">Заполнить форму</a>
+            </div>
         </div>
     </div>
 

@@ -993,7 +993,7 @@ body {
     padding: 12px; 
     border-radius: 8px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     background-color: rgba(32, 32, 32, 1);
     color: white;
     border: none;
@@ -1045,4 +1045,181 @@ body {
 .arrow-link img {
     width: 34px; 
     height: 34px;
+}
+
+
+
+
+/* КОНТАКТНЫЙ БЛОК */
+
+
+.contact-block {
+    margin-top: 140px;
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Левая часть с изображением */
+.contact-image {
+    flex: 1 1 50%;
+    min-width: 300px;
+    height: 386px;
+    background-image: url('../styles/images/MainScreen.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 15px;
+    width: 100%; 
+}
+
+.contact-text h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-text svg {
+    margin-bottom: 15px; 
+}
+
+/* Контактная форма */
+.contact-form {
+    flex: 1 1 50%;
+    background-color: rgba(244, 244, 244, 1);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 0 12px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid #ddd; 
+}
+
+.custom-checkbox {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.accept-input {
+    font-size: 100px;
+}
+
+.checkbox-icon {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-icon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.unchecked {
+    display: block;
+}
+
+.checked {
+    display: none;
+}
+
+.accept-input:checked ~ .checkbox-icon .unchecked {
+    display: none;
+}
+
+.accept-input:checked ~ .checkbox-icon .checked {
+    display: block;
+}
+
+.checkbox-text {
+    color: rgba(32, 32, 32, 0.5);
+    line-height: 1.4;
+    text-align: left;
+    word-break: break-word;
+    white-space: normal;
+    flex: 1;
+}
+
+.checkbox-text strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.contact-submit {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-submit-button {
+    flex: 1;
+    max-width: 100%;
+    height: 46px;
+    font-size: 16px;
+    padding: 12px;
+    background-color: rgba(32, 32, 32, 1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.arrow-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.arrow-submit img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease;
 }

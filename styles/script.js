@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeSuccessModalTwo.addEventListener("click", () => {
         closeModal("modal-success"); 
     });
-
+    
     document.querySelectorAll(".custom-checkbox").forEach((checkboxContainer) => {
         const checkbox = checkboxContainer.querySelector(".accept-input");
         const checkboxIcon = checkboxContainer.querySelector(".checkbox-icon");
@@ -186,6 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
             checked.style.display = checkbox.checked ? "block" : "none";
         });
     });
+    
 
     const items = document.querySelectorAll('.tech-settings');
 
@@ -203,18 +204,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const toggleBtn = item.querySelector(".toggle-btn");
         const content = item.querySelector(".accordion-content");
 
+        // При клике на заголовок или кнопку, скрываем или показываем контент
         header.addEventListener("click", function() {
         item.classList.toggle("active");
 
+        // Переключаем состояние стрелочек
         const arrowClosed = toggleBtn.querySelector(".arrow-closed");
         const arrowOpen = toggleBtn.querySelector(".arrow-open");
 
         if (item.classList.contains("active")) {
-            arrowClosed.style.display = "none"; 
-            arrowOpen.style.display = "block";
+            arrowClosed.style.display = "none"; // Скрыть стрелку закрытого состояния
+            arrowOpen.style.display = "block"; // Показать стрелку открытого состояния
         } else {
-            arrowClosed.style.display = "block"; 
-            arrowOpen.style.display = "none"; 
+            arrowClosed.style.display = "block"; // Показать стрелку закрытого состояния
+            arrowOpen.style.display = "none"; // Скрыть стрелку открытого состояния
         }
         });
     });

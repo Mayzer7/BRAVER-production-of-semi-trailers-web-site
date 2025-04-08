@@ -11,6 +11,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+}
+
+
 body {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 18px;
@@ -421,6 +427,7 @@ body {
     position: relative;
 }
 
+
 .arrow-button {
     display: inline-block; 
     cursor: pointer; 
@@ -446,6 +453,10 @@ body {
     z-index: 10; 
 }
 
+.arrow-button-mobile {
+    display: none;
+}
+
 .product-image img {
     width: 585px; 
     height: 352px; 
@@ -454,12 +465,11 @@ body {
 }
 
 .video-img {
-    min-width: 706px; 
-    min-height: 425px; 
     width: 100%;
-    height: auto; 
-    object-fit: contain; 
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
+    max-width: 706px;
 }
 
 /* Кнопка проигрывания */
@@ -477,6 +487,17 @@ body {
     display: flex; 
     justify-content: center;
     align-items: center; 
+}
+
+@media (max-width: 768px) {
+    /* Скрываем правое изображение (видео) */
+    .product-images .product-image:nth-child(2) {
+        display: none;
+    }
+
+    .arrow-button-mobile {
+        display: flex;
+    }
 }
 
 
@@ -566,6 +587,17 @@ body {
     border-radius: 8px;
     overflow: hidden;
 }
+
+
+.choice-tech-settings.hidden {
+    display: none;
+}
+
+.choice-tech-settings.active {
+    display: block;
+}
+
+
   
 .tech-settings {
     flex: 1;
@@ -604,7 +636,7 @@ body {
     color: white;
 }
 
-.choice-settings-container {
+.choice-tech-settings {
     background-color: rgba(244, 244, 244, 1);
     border-radius: 8px;
     margin-top: 10px;
@@ -728,6 +760,36 @@ body {
 
 .arrow-link img {
     transition: transform 0.3s ease;
+}
+
+/* Desktop: по умолчанию */
+.product-info-right.mobile {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .product-info-right {
+        width: 100%;
+    }
+    .product-info-left {
+        width: 100%;
+    }
+
+    .product-card-image img {
+        width: 100%; /* чтобы картинка тоже подстраивалась */
+        height: auto;
+    }
+
+    .product-info-right.desktop {
+        display: none;
+    }
+
+    .product-info-right.mobile {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
 }
 
 

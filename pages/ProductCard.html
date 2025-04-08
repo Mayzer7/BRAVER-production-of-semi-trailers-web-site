@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../styles/ProductCardStyles.css">
     <title>BRAVER production - Карточка товара</title>
 </head>
@@ -83,6 +83,16 @@
                         </svg>
                     </div>
                 </button>
+
+                <!-- Стрелка вправо -->
+                <button class="arrow-button-mobile arrow-right">
+                    <div class="arrow-container-right">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="24" fill="#202020"/>
+                            <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </div>
+                </button>
     
                 <img src="../styles/images/Trailer.png" alt="Trailer">
             </div>
@@ -125,6 +135,45 @@
                     ЗЕРНОВОЗЫ БОРТОВЫЕ 46-60 М³<BR> С ВЫНЕСЕННОЙ ОСЬЮ
                 </div>
 
+                <div class="product-info-right mobile">
+                    <div class="product-info-card">
+                        <div class="info-row">
+                          <span class="label">Объём</span>
+                          <span class="value">46 - 60³</span>
+                        </div>
+                        <div class="info-row">
+                          <span class="label">Количество осей</span>
+                          <span class="value">3 оси</span>
+                        </div>
+                        <div class="info-row">
+                          <span class="label">Снаряженная масса</span>
+                          <span class="value">от 5 900 кг</span>
+                        </div>
+                        <div class="info-row no-border">
+                          <span class="label">Стоимость</span>
+                          <span class="value cost">4 120 000 ₽</span>
+                        </div>
+                    
+                        <div class="tech-link">Технические характеристики</div>
+                    </div>
+                    
+                    <div class="product-info-buttons">
+                        <div class="submit-app">
+                            <a href="#" class="request-button">Оставить заявку</a>
+                            <a href="">
+                                <img src="../styles/images/svg/arrow-bg-black.svg" alt="">
+                            </a>
+                        </div>
+                      
+                        <div class="submit-app">
+                            <a href="#" class="get-consultation">Получить консультацию</a>
+                            <a href="">
+                                <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>  
+
                 <div class="product-about">
                     О полуприцепе
                 </div>
@@ -145,166 +194,277 @@
 
                 <div class="product-card-choice-settings">
                     <div class="choice-settings-navbar">
-                        <div class="tech-settings active">
-                          <div class="dot"></div>
-                          <span>Технические характеристики</span>
+                        <div class="tech-settings active" onclick="switchTab('tech-settings')">
+                            <div class="dot"></div>
+                            <span>Технические характеристики</span>
                         </div>
-                        <div class="tech-settings">
-                          <div class="dot"></div>
-                          <span>Комплектация</span>
+                        <div class="tech-settings" onclick="switchTab('tech-complete')">
+                            <div class="dot"></div>
+                            <span>Комплектация</span>
                         </div>
-                        <div class="tech-settings">
-                          <div class="dot"></div>
-                          <span>Техническая документация</span>
+                        <div class="tech-settings" onclick="switchTab('tech-doc')">
+                            <div class="dot"></div>
+                            <span>Техническая документация</span>
                         </div>
                     </div>
 
                     <div class="choice-settings-container">
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Габаритные размеры
+                        <!-- Технические характеристики -->
+                        <div class="choice-tech-settings active" id="tech-settings">
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Габаритные размеры
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        длина: 12 100 мм<br>
+                                        ширина: 2 550 мм<br>
+                                        высота: 3 310 мм
+                                    </div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    длина: 12 100 мм<br>
-                                    ширина: 2 550 мм<br>
-                                    высота: 3 310 мм
+        
+                                <div class="settings-line"></div>
+                            </div>
+        
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Объём
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        46 - 60³
+                                    </div>
                                 </div>
+        
+                                <div class="settings-line"></div>
                             </div>
     
-                            <div class="settings-line"></div>
-                        </div>
-    
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Объём
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Количество осей
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        4 оси
+                                    </div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    46 - 60³
-                                </div>
+        
+                                <div class="settings-line"></div>
                             </div>
     
-                            <div class="settings-line"></div>
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Снаряженная масса
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        от 7 200 кг
+                                    </div>
+                                </div>
+        
+                                <div class="settings-line"></div>
+                            </div>
+    
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Количество секций
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        1 секция: 8 м³<br>
+                                        2 секция: 10,3 м³<br>
+                                        3 секция: 13,7 м³<br>
+                                        Объемы секций указаны по порядку от ССУ
+                                    </div>
+                                </div>
+        
+                                <div class="settings-line"></div>
+                            </div>
+    
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Подвеска и шины
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        4 оси<br>
+                                        2 оси подъёмные<br>
+                                        тормозные механизмы барабанного / дискового типа<br>
+                                        шины (на усмотрение производителя) размерностью<br> 
+                                        385/65 R22,5 с диском - 8 + 1 шт.
+                                    </div>
+                                </div>
+        
+                                <div class="settings-line"></div>
+                            </div>
+    
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Тормозная система
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        пневматическая двухконтурная
+                                    </div>
+                                </div>
+        
+                                <div class="settings-line"></div>
+                            </div>
+    
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Электрооборудование
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        электрооборудование Aspoeck / Hella / Ermax или аналог
+                                    </div>
+                                </div>
+        
+                                <div class="settings-line"></div>
+                            </div>
+    
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Высота ССУ
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        1 150 мм
+                                    </div>
+                                </div>
+        
+                                <div class="settings-line"></div>
+                            </div>
+    
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">
+                                        Окраска
+                                    </div>
+        
+                                    <div class="settings-value">
+                                        обработка поверхности в дробеструйной камере<br>
+                                        покрытие грунтом с содержанием антикоррозийных элементов<br>
+                                        окраска премиальной эмалью
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Количество осей
+                        <!-- Комплектация -->
+                        <div class="choice-tech-settings hidden" id="tech-complete">
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Инструментальный ящик</div>
+                                    <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    4 оси
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Запасное колесо</div>
+                                    <div class="settings-value">1 шт., крепление с держателем</div>
+                                </div>
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Лестница обслуживания</div>
+                                    <div class="settings-value">складная, боковое размещение</div>
+                                </div>
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Защита от бокового удара</div>
+                                    <div class="settings-value">алюминиевые щиты с усилением</div>
+                                </div>
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Крылья колес</div>
+                                    <div class="settings-value">пластиковые, индивидуальные над каждой осью</div>
+                                </div>
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Противооткатные упоры</div>
+                                    <div class="settings-value">2 шт., в держателях</div>
+                                </div>
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Кронштейн под номерной знак</div>
+                                    <div class="settings-value">с подсветкой, на заднем щите</div>
+                                </div>
+                                <div class="settings-line"></div>
+                            </div>
+
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Огнетушитель</div>
+                                    <div class="settings-value">6 кг, порошковый, с кронштейном</div>
                                 </div>
                             </div>
-    
-                            <div class="settings-line"></div>
                         </div>
 
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Снаряженная масса
+                        <!-- Техническая документация -->
+                        <div class="choice-tech-settings hidden" id="tech-doc">
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Руководство по эксплуатации</div>
+                                    <div class="settings-value">PDF, на русском языке, содержит полные инструкции по работе и обслуживанию</div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    от 7 200 кг
-                                </div>
+                                <div class="settings-line"></div>
                             </div>
-    
-                            <div class="settings-line"></div>
-                        </div>
 
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Количество секций
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Сертификат соответствия</div>
+                                    <div class="settings-value">в соответствии с ТР ТС 018/2011</div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    1 секция: 8 м³<br>
-                                    2 секция: 10,3 м³<br>
-                                    3 секция: 13,7 м³<br>
-                                    Объемы секций указаны по порядку от ССУ
-                                </div>
+                                <div class="settings-line"></div>
                             </div>
-    
-                            <div class="settings-line"></div>
-                        </div>
 
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Подвеска и шины
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Паспорт изделия</div>
+                                    <div class="settings-value">с указанием заводского номера, даты выпуска и характеристик</div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    4 оси<br>
-                                    2 оси подъёмные<br>
-                                    тормозные механизмы барабанного / дискового типа<br>
-                                    шины (на усмотрение производителя) размерностью<br> 
-                                    385/65 R22,5 с диском - 8 + 1 шт.
-                                </div>
+                                <div class="settings-line"></div>
                             </div>
-    
-                            <div class="settings-line"></div>
-                        </div>
 
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Тормозная система
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Схема электрооборудования</div>
+                                    <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
                                 </div>
-    
-                                <div class="settings-value">
-                                    пневматическая двухконтурная
-                                </div>
+                                <div class="settings-line"></div>
                             </div>
-    
-                            <div class="settings-line"></div>
-                        </div>
 
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Электрооборудование
-                                </div>
-    
-                                <div class="settings-value">
-                                    электрооборудование Aspoeck / Hella / Ermax или аналог
-                                </div>
-                            </div>
-    
-                            <div class="settings-line"></div>
-                        </div>
-
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Высота ССУ
-                                </div>
-    
-                                <div class="settings-value">
-                                    1 150 мм
-                                </div>
-                            </div>
-    
-                            <div class="settings-line"></div>
-                        </div>
-
-                        <div class="choise-settings-desc">
-                            <div class="settings-info">
-                                <div class="settings-name">
-                                    Окраска
-                                </div>
-    
-                                <div class="settings-value">
-                                    обработка поверхности в дробеструйной камере<br>
-                                    покрытие грунтом с содержанием антикоррозийных элементов<br>
-                                    окраска премиальной эмалью
+                            <div class="choise-settings-desc">
+                                <div class="settings-info">
+                                    <div class="settings-name">Инструкция по покраске</div>
+                                    <div class="settings-value">описание используемых материалов и технологии нанесения покрытия</div>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +472,7 @@
                 </div>
             </div>
             
-            <div class="product-info-right">
+            <div class="product-info-right desktop">
                 <div class="product-info-card">
                   <div class="info-row">
                     <span class="label">Объём</span>

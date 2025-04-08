@@ -1,3 +1,29 @@
+// ГЛОБАЛЬНАЯ ФУНКЦИЯ — вне DOMContentLoaded!
+function switchTab(tabId) {
+    const tabs = document.querySelectorAll('.choice-tech-settings');
+
+    tabs.forEach(tab => {
+        if (tab.id === tabId) {
+            tab.classList.add('active');
+            tab.classList.remove('hidden');
+        } else {
+            tab.classList.remove('active');
+            tab.classList.add('hidden');
+        }
+    });
+
+    // Обновляем кнопки сверху
+    const navItems = document.querySelectorAll('.tech-settings');
+    navItems.forEach(item => {
+        const targetId = item.getAttribute('onclick').match(/'(.+?)'/)[1];
+        if (targetId === tabId) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}   
+
 document.addEventListener("DOMContentLoaded", () => {
     // Переключение языка
     const buttons = document.querySelectorAll(".lang-button");
@@ -31,12 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const dropdown = parent.querySelector(".dropdown");
             const isActive = parent.classList.contains("active");
 
+            // Закрытие всех остальных меню
             document.querySelectorAll(".nav-item").forEach(navItem => {
                 navItem.classList.remove("active");
                 const navDropdown = navItem.querySelector(".dropdown");
                 if (navDropdown) navDropdown.style.display = "none";
             });
 
+            // Открытие текущего меню, если оно не активно
             if (!isActive) {
                 parent.classList.add("active");
                 if (dropdown) dropdown.style.display = "block";
@@ -57,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Функция для управления конкретным модальным окном
     function setupModal(modalId, buttonClass) {
         const modal = document.getElementById(modalId);
         const openModalBtn = document.querySelector(`.${buttonClass}`);
@@ -80,94 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Подключаем разные кнопки к своим окнам
     setupModal("modal-call", "contact-button"); // "Заказать звонок"
     setupModal("modal-req", "request-button");  // "Оставить заявку"
 
-    function showModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.style.display = "flex";
-        }
-    }
-
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Проверка формы
-    const submitButton = document.querySelector(".submit-button-modal");
-    const modalCall = document.getElementById("modal-call");
-    const modalError = document.getElementById("modal-error");
-    const modalSuccess = document.getElementById("modal-success"); 
-
-    submitButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
-
-        const inputs = modalCall.querySelectorAll("input");
-        let isValid = true;
-
-        // Проверяем все поля формы
-        inputs.forEach(input => {
-            if (input.value.trim() === "") {
-                isValid = false;
-                input.classList.add("error");
-            } else {
-                input.classList.remove("error"); 
-            }
-        });
-
-        const checkbox = modalCall.querySelector(".accept-input");
-        if (!checkbox.checked) {
-            isValid = false;
-            modalCall.querySelector(".checkbox-text").classList.add("error");
-        } else {
-            modalCall.querySelector(".checkbox-text").classList.remove("error");
-        }
-
-        if (isValid) {
-            closeModal("modal-call"); 
-            showModal("modal-success"); 
-        } else {
-            closeModal("modal-call"); 
-            showModal("modal-error"); 
-        }
-    });
-
-    const closeErrorModal = modalError.querySelector(".close");
-    const errorSubmitButton = modalError.querySelector(".submit-button-modal-error");
-
-    closeErrorModal.addEventListener("click", () => {
-        closeModal("modal-error");
-    });
-
-    errorSubmitButton.addEventListener("click", () => {
-        closeModal("modal-error"); 
-        showModal("modal-call"); 
-    
-        const inputs = modalCall.querySelectorAll("input");
-        inputs.forEach(input => {
-            input.classList.remove("error"); 
-        });
-    
-        const checkbox = modalCall.querySelector(".accept-input");
-        checkbox.checked = false;
-        modalCall.querySelector(".checkbox-text").classList.remove("error");
-    });
-
-    const closeSuccessModal = modalSuccess.querySelector(".close");
-    const closeSuccessModalTwo = modalSuccess.querySelector(".submit-button-modal-success")
-
-    closeSuccessModal.addEventListener("click", () => {
-        closeModal("modal-success"); 
-    });
-
-    closeSuccessModalTwo.addEventListener("click", () => {
-        closeModal("modal-success"); 
-    });
-    
+    // Чекбоксы для каждого окна
     document.querySelectorAll(".custom-checkbox").forEach((checkboxContainer) => {
         const checkbox = checkboxContainer.querySelector(".accept-input");
         const checkboxIcon = checkboxContainer.querySelector(".checkbox-icon");
@@ -175,10 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!checkbox || !checkboxIcon) return;
 
         checkboxIcon.addEventListener("click", (event) => {
-            event.preventDefault();
+            event.preventDefault(); 
 
             checkbox.checked = !checkbox.checked;
 
+            // Обновляем классы мгновенно
             const unchecked = checkboxIcon.querySelector(".unchecked");
             const checked = checkboxIcon.querySelector(".checked");
 
@@ -186,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
             checked.style.display = checkbox.checked ? "block" : "none";
         });
     });
+    
     
 
     const items = document.querySelectorAll('.tech-settings');
@@ -197,6 +145,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
+    
+
+    
     const accordionItems = document.querySelectorAll(".accordion-item");
 
     accordionItems.forEach(item => {
@@ -221,4 +173,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         });
     });
+    
+
+
+    
 });

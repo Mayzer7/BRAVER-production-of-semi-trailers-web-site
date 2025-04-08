@@ -1,14 +1,13 @@
-// ГЛОБАЛЬНАЯ ФУНКЦИЯ — вне DOMContentLoaded!
 function switchTab(tabId) {
     const tabs = document.querySelectorAll('.choice-tech-settings');
 
     tabs.forEach(tab => {
         if (tab.id === tabId) {
+            tab.classList.remove('hidden'); // Показываем выбранный блок
             tab.classList.add('active');
-            tab.classList.remove('hidden');
         } else {
+            tab.classList.add('hidden'); // Скрываем остальные блоки
             tab.classList.remove('active');
-            tab.classList.add('hidden');
         }
     });
 
@@ -22,7 +21,7 @@ function switchTab(tabId) {
             item.classList.remove('active');
         }
     });
-}   
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // Переключение языка

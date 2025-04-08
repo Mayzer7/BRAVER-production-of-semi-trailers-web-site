@@ -159,17 +159,21 @@
                     
                     <div class="product-info-buttons">
                         <div class="submit-app">
-                            <a href="#" class="request-button">Оставить заявку</a>
-                            <a href="">
-                                <img src="../styles/images/svg/arrow-bg-black.svg" alt="">
-                            </a>
+                          <a href="#" class="request-button">
+                            Оставить заявку
+                            <span class="arrow-link">
+                              <img src="../styles/images/svg/arrow-bg-black.svg" alt="">
+                            </span>
+                          </a>
                         </div>
                       
                         <div class="submit-app">
-                            <a href="#" class="get-consultation">Получить консультацию</a>
-                            <a href="">
-                                <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
-                            </a>
+                          <a href="#" class="get-consultation">
+                            Получить консультацию
+                            <span class="arrow-link">
+                              <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
+                            </span>
+                          </a>
                         </div>
                     </div>
                 </div>  
@@ -192,19 +196,40 @@
                     <img src="../styles/images/ProductCardImage.png" alt="">
                 </div>
 
+                <!-- ДЕСКТОПНАЯ ВЕРСИЯ -->
                 <div class="product-card-choice-settings">
                     <div class="choice-settings-navbar">
                         <div class="tech-settings active" onclick="switchTab('tech-settings')">
                             <div class="dot"></div>
                             <span>Технические характеристики</span>
+                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                    stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
+
                         <div class="tech-settings" onclick="switchTab('tech-complete')">
                             <div class="dot"></div>
                             <span>Комплектация</span>
+                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                    stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
+
                         <div class="tech-settings" onclick="switchTab('tech-doc')">
                             <div class="dot"></div>
                             <span>Техническая документация</span>
+                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                    stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </div>
 
@@ -522,12 +547,12 @@
                     <span class="title">ДОСТАВКА</span>
                     <button class="toggle-btn">
                       <!-- Стрелка для состояния "закрыто" (по умолчанию) -->
-                      <svg class="arrow-closed" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="arrow-closed" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
                         <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                       <!-- Стрелка для состояния "открыто" -->
-                      <svg class="arrow-open" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="arrow-open" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="43" height="43" rx="8" fill="#202020"/>
                         <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
@@ -612,14 +637,14 @@
         
                 <div class="might-be-interesting-arrows">
                     <button class="arrow-button">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="left-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#202020"/>
                             <path d="M27 17.3047L21.4882 22.8165C20.8373 23.4674 20.8373 24.5326 21.4882 25.1835L27 30.6953" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
             
                     <button class="arrow-button">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="right-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="48" height="48" rx="24" fill="#202020"/>
                             <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -789,7 +814,7 @@
         <div class="contact-block">
             <div class="contact-image">
                 <div class="contact-text">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="circle" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="10" cy="10" r="10" fill="white"/>
                     </svg>
                         

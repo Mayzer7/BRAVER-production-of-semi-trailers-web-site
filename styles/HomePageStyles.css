@@ -301,7 +301,7 @@ body {
 
 @media (max-width: 992px) {
     .nav {
-        display: none; /* скрываем меню на совсем малых экранах */
+        display: none; 
     }
 
     .burger {
@@ -309,8 +309,6 @@ body {
     }
 }
 
-
-/* Адаптивность мод низкие разрешения */
 @media (max-width: 1335px) {
     .header {
         padding: 15px 20px;
@@ -439,6 +437,7 @@ body {
 
 .request-button {
     font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
     width: 282px;
     height: 48px;
     padding: 12px 68px;
@@ -461,6 +460,35 @@ body {
 .arrow-link img {
     transition: transform 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+
+    .request-button {
+        padding: 15px 68px;
+    }
+
+    .main-page-content {
+        margin-bottom: 50px;
+    }
+    .title {
+        font-size: 35px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column; 
+        gap: 20px; 
+    }
+}
+
 
 /* Всплывающие модальное окно при нажатии на кнопку "Заказать звонок" */
 

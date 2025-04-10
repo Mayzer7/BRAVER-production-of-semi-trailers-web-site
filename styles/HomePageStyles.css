@@ -18,11 +18,10 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
+html, body {
+    height: 100%; /* Обеспечиваем, что тело страницы будет иметь полную высоту */
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    overflow-y: hidden; /* Отключаем вертикальную прокрутку, если она не нужна */
 }
 
 .main-page {
@@ -42,7 +41,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -198,6 +197,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 12px;
+    min-height: 40px;
 }
 
 /* Выбор языка */
@@ -218,7 +218,8 @@ body {
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
     flex: 1; 
-    border-radius: 12px; 
+    border-radius: 12px;
+    min-height: 40px; 
 }
 
 .lang-button.active {
@@ -430,6 +431,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
+    
 }
 
 .modal-content {
@@ -437,8 +439,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    min-width: 400px;  
-    max-width: 90vw;   
+    min-width: 220px;  
     width: auto;       
     position: relative;
     color: black;
@@ -532,7 +533,6 @@ body {
     font-family: 'Helvetica Neue Bolt';
     margin-left: 10px;  
     font-size: 16px;    
-    white-space: nowrap; 
     line-height: 1.5;   
     text-align: left;   
     margin-top: 5px;
@@ -547,6 +547,7 @@ body {
     margin-top: 20px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .submit-button-modal {
@@ -608,6 +609,7 @@ body {
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap; 
+    
 }
 
 .modal-inputs-req input {
@@ -653,6 +655,29 @@ body {
     font-family: 'Helvetica Neue Bolt';
 }
 
+@media (max-width: 715px) {
+    .close {
+        right: 0px;
+        top: -50px;
+    }
+
+    .modal {
+        align-items: flex-end;
+    }
+
+    .modal-content {
+        max-height: 100%;
+        overflow-y: auto;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .arrow-link-modal {
+        display: none;  
+    }
+}
+
 
 /* Всплывающие модальное окно при успешной отправки формы */
 
@@ -662,8 +687,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    min-width: 557px;  
-    width: auto;       
+    max-width: 557px;  
+    width: 100%;       
     position: relative;
     color: black;
     display: flex;
@@ -716,8 +741,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    min-width: 557px;  
-    width: auto;       
+    max-width: 557px;  
+    width: 100%;       
     position: relative;
     color: black;
     display: flex;

@@ -140,32 +140,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Функция для управления конкретным модальным окном
-    function setupModal(modalId, buttonClass) {
+    function setupModal(modalId, buttonClass, options = {}) {
         const modal = document.getElementById(modalId);
         const openModalBtn = document.querySelector(`.${buttonClass}`);
-        
+        const closeModalBtn = modal?.querySelector(".close");
+    
+        const delay = options.delay || 300;
+        const burgerCloseBtn = options.burgerCloseButtonSelector
+            ? document.querySelector(options.burgerCloseButtonSelector)
+            : null;
+    
         if (!modal || !openModalBtn) return;
-
-        const closeModalBtn = modal.querySelector(".close");
-
+    
         openModalBtn.addEventListener("click", () => {
-            modal.style.display = "flex";
+            // Закрываем бургер, если есть кнопка
+            if (burgerCloseBtn) {
+                burgerCloseBtn.click();
+            }
+    
+            // Ждём (если нужно), потом показываем модалку
+            setTimeout(() => {
+                modal.style.display = "flex";
+                document.body.style.overflow = "hidden";
+            }, burgerCloseBtn ? delay : 0);
         });
-
-        closeModalBtn.addEventListener("click", () => {
+    
+        closeModalBtn?.addEventListener("click", () => {
             modal.style.display = "none";
+            document.body.style.overflow = "";
         });
-
+    
         window.addEventListener("click", (event) => {
             if (event.target === modal) {
                 modal.style.display = "none";
+                document.body.style.overflow = "";
             }
         });
     }
 
-    // Подключаем разные кнопки к своим окнам
-    setupModal("modal-call", "contact-button"); // "Заказать звонок"
-    setupModal("modal-req", "request-button");  // "Оставить заявку"
+    // "Заказать звонок" в футере
+    setupModal("modal-call", "contact-button");
+
+    // "Заказать звонок" в бургер-меню (с закрытием бургера)
+    setupModal("modal-call", "callback-btn", {
+        burgerCloseButtonSelector: ".close-btn", // <— вот твоя кнопка
+    });
+
+    // "Оставить заявку"
+    setupModal("modal-req", "request-button");
 
     // Чекбоксы для каждого окна
     document.querySelectorAll(".custom-checkbox").forEach((checkboxContainer) => {
@@ -188,8 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-    
-
+    // Для переключения информации товара
     const items = document.querySelectorAll('.tech-settings');
 
     items.forEach(item => {
@@ -199,10 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    
-
-    
+    // Навигация в бургер меню
     const accordionItems = document.querySelectorAll(".accordion-item");
 
     accordionItems.forEach(item => {
@@ -229,6 +247,132 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 
+    
 
+
+    
+
+    
+    // Модальные окна
+    const modalCall = document.getElementById("modal-call"); // Заказать звонок
+    const modalReq = document.getElementById("modal-req"); // Оставить заявку
+    const modalError = document.getElementById("modal-error"); // Модальное окно ошибки
+    const modalSuccess = document.getElementById("modal-success"); // Модальное окно успеха
+
+    // Кнопки отправки для обоих форм
+    const submitButtonModalCall = modalCall.querySelector(".submit-button-modal");
+    const submitButtonModalReq = modalReq.querySelector(".submit-button-modal");
+
+    // Кнопка "Заполнить форму" в окне ошибки
+    const retryButton = modalError.querySelector(".submit-button-modal-error");
+
+    // Флаг для отслеживания текущего окна
+    let currentModal = null;
+
+    // Функция для закрытия всех модальных окон
+    function closeModals() {
+        modalCall.style.display = "none";
+        modalReq.style.display = "none";
+        modalError.style.display = "none";
+        modalSuccess.style.display = "none";
+        document.body.style.overflow = "";
+    }
+
+    // Функция для открытия модального окна ошибки
+    function openErrorModal() {
+        modalError.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+
+    // Функция для открытия модального окна успеха
+    function openSuccessModal() {
+        modalSuccess.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+
+    // Обработчик клика по кнопке "Отправить" в модальном окне "Заказать звонок"
+    submitButtonModalCall.addEventListener("click", (event) => {
+        event.preventDefault(); // Отключаем стандартное поведение (отправка формы)
+
+        // Получаем значения полей
+        const phone = document.querySelector("input[type='text']:first-of-type").value.trim(); // Телефон
+        const companyName = document.querySelector("input[type='text']:last-of-type").value.trim(); // Название компании
+        const acceptPolicy = document.querySelector(".accept-input").checked; // Чекбокс согласия
+
+        // Проверка обязательных полей
+        if (!phone || !companyName || !acceptPolicy) {
+            // Скрываем модальное окно заявки перед открытием окна ошибки
+            modalCall.style.display = "none";
+            // Открываем модальное окно ошибки
+            currentModal = 'modal-call'; // Запоминаем, что ошибка была из "Заказать звонок"
+            openErrorModal();
+        } else {
+            // Если все поля заполнены корректно
+            modalCall.style.display = "none";
+            openSuccessModal();
+        }
+    });
+
+    // Обработчик клика по кнопке "Отправить" в модальном окне "Оставить заявку"
+    submitButtonModalReq.addEventListener("click", (event) => {
+        event.preventDefault(); // Отключаем стандартное поведение (отправка формы)
+
+        // Получаем значения полей
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const comment = document.getElementById("comment").value.trim();
+        const acceptPolicy = document.getElementById("accept-policy").checked;
+
+        // Проверка обязательных полей
+        if (!name || !phone || !email || !comment || !acceptPolicy) {
+            // Скрываем модальное окно заявки перед открытием окна ошибки
+            modalReq.style.display = "none";
+            // Открываем модальное окно ошибки
+            currentModal = 'modal-req'; // Запоминаем, что ошибка была из "Оставить заявку"
+            openErrorModal();
+        } else {
+            // Если все поля заполнены корректно
+            modalReq.style.display = "none";
+            openSuccessModal();
+        }
+    });
+
+    // Обработчик для кнопки "Заполнить форму" в окне ошибки
+    retryButton.addEventListener("click", () => {
+        closeModals();
+        if (currentModal === 'modal-call') {
+            modalCall.style.display = "flex"; // Возвращаем в "Заказать звонок"
+        } else if (currentModal === 'modal-req') {
+            modalReq.style.display = "flex"; // Возвращаем в "Оставить заявку"
+        }
+        document.body.style.overflow = "hidden";
+    });
+
+    // Обработчик для закрытия модального окна ошибки
+    const closeErrorModal = modalError.querySelector(".close");
+    closeErrorModal.addEventListener("click", () => {
+        closeModals();
+    });
+
+    // Обработчик для закрытия модального окна успеха
+    const closeSuccessModal = modalSuccess.querySelector(".close");
+    closeSuccessModal.addEventListener("click", () => {
+        closeModals();
+    });
+
+    // Обработчик для закрытия модального окна успеха через кнопку
+    const closeSuccessModalWithButton = modalSuccess.querySelector(".submit-button-modal-success");
+    closeSuccessModalWithButton.addEventListener("click", () => {
+        closeModals();
+    });
+    
+
+    // Закрытие модальных окон, если кликнули за пределами окна
+    window.addEventListener("click", (event) => {
+        if (event.target === modalError || event.target === modalSuccess) {
+            closeModals();
+        }
+    });
     
 });

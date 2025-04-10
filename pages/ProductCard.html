@@ -178,7 +178,7 @@
                             </div>
                         
                             <div class="submit-app">
-                                <a href="#" class="get-consult-mobile">Оставить заявку</a>
+                                <a href="#" class="get-consult-mobile">Получить консультацию</a>
                                 <a href="">
                                     <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
                                 </a>
@@ -215,10 +215,6 @@
                                         stroke="currentColor" stroke-width="1.5"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
-                                
-                                
-                                
                             </div>
 
                             <div class="tech-settings" onclick="switchTab('tech-complete')">
@@ -703,9 +699,17 @@
 
                             <!-- Комплектация -->
                             <div class="choice-tech-settings hidden" id="tech-complete">
-                                <div class="choise-settings-desc">
+                                <div class="choise-settings-desc-pc">
                                     <div class="settings-info">
                                         <div class="settings-name">Инструментальный ящик</div>
+                                        <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc-mobile">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Инструмен-<br>тальный ящик</div>
                                         <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
                                     </div>
                                     <div class="settings-line"></div>
@@ -804,9 +808,17 @@
                                     <div class="settings-line"></div>
                                 </div>
 
-                                <div class="choise-settings-desc">
+                                <div class="choise-settings-desc-pc">
                                     <div class="settings-info">
                                         <div class="settings-name">Схема электрооборудования</div>
+                                        <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc-mobile">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Схема электро-<br>оборудования</div>
                                         <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
                                     </div>
                                     <div class="settings-line"></div>
@@ -847,7 +859,7 @@
                 
                     <div class="product-info-buttons">
                         <div class="submit-app">
-                            <a href="#" class="request-button">Оставить заявку</a>
+                            <a href="#" class="request-button-right">Оставить заявку</a>
                             <a href="">
                                 <img src="../styles/images/svg/arrow-bg-black.svg" alt="">
                             </a>
@@ -1196,7 +1208,7 @@
                             </div>
 
                             <div class="call-button-container">
-                                <button class="call-button">Заказать звонок</button>
+                                <button class="call-button-footer-mobile">Заказать звонок</button>
                             </div>
 
                             <div class="columns-mobile">
@@ -1277,17 +1289,17 @@
                             <div class="socials-container">
                                 <div class="social-and-lang-switch">
                                     <div class="socials-items">
-                                        <div class="social-icon">
-                                            <img src="../styles/images/svg/vk.svg" alt="">
-                                        </div>
-                                        <div class="social-icon">
-                                            <img src="../styles/images/svg/whatsapp.svg" alt="">
-                                        </div>
-                                        <div class="social-icon">
-                                            <img src="../styles/images/svg/telegram.svg" alt="">
-                                        </div>
+                                        <a href="https://vk.com" target="_blank" class="social-icon">
+                                            <img src="../styles/images/svg/vk.svg" alt="VK">
+                                        </a>
+                                        <a href="https://wa.me/" target="_blank" class="social-icon">
+                                            <img src="../styles/images/svg/whatsapp.svg" alt="WhatsApp">
+                                        </a>
+                                        <a href="https://t.me/your_username" target="_blank" class="social-icon">
+                                            <img src="../styles/images/svg/telegram.svg" alt="Telegram">
+                                        </a>
                                     </div>
-
+                            
                                     <div class="lang-switcher-socials">
                                         <button class="lang-button active" data-lang="ru">RU</button>
                                         <button class="lang-button" data-lang="en">EN</button>
@@ -1351,7 +1363,7 @@
                             
                             <div class="buttons-container">
                                 <div class="footer-buttons">
-                                    <button class="call-button">Заказать звонок</button>
+                                    <button class="call-button-footer">Заказать звонок</button>
                                 </div>
                             </div>
 
@@ -1383,8 +1395,6 @@
             </div>
         </section>
     </div>
-    
-    <!-- БУРГЕР -->
 
     <!-- БУРГЕР -->
     <div class="wrapper" style="display: none;">
@@ -1503,6 +1513,160 @@
             <button class="callback-btn">Заказать звонок</button>
           </div>
         </footer>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Заказать звонок" -->
+    <div id="modal-call" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+            <p>Оставьте телефон, и мы свяжемся с Вами в течение 15 минут</p>
+            <div class="modal-inputs">
+                <input type="text" placeholder="+7 (___) ___-__-__">
+                <input type="text" placeholder="Название компании">
+            </div>
+            <label class="custom-checkbox">
+                <input type="checkbox" class="accept-input" hidden>
+                
+                <span class="checkbox-icon">
+                    <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                    <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                </span>
+
+                <div class="checkbox-text">
+                    Нажимая на кнопку, я принимаю условия <strong>Политики<br> конфиденциальности</strong>
+                </div>
+            </label>
+            <div class="submit-modal">
+                <a href="#" class="submit-button-modal">Отправить</a>
+                <a href="#" class="arrow-link-modal">
+                    <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Оставить заявку" -->
+    <div id="modal-req" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
+            <p>Оставьте Ваши данные, и мы свяжемся с вами в течение 15 минут</p>
+            <form id="modal-call-form">
+                <div class="modal-inputs-req">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя">
+                    <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <textarea id="comment" name="comment" placeholder="Ваш комментарий"></textarea>
+                </div>
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="accept-input" id="accept-policy" hidden>
+                    <span class="checkbox-icon">
+                        <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                        <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                    </span>
+                    <div class="checkbox-text">
+                        Нажимая на кнопку, я принимаю условия <strong>Политики конфиденциальности</strong>
+                    </div>
+                </label>
+                <div class="submit-modal">
+                    <a href="#" class="submit-button-modal">Отправить</a>
+                    <a href="#" class="arrow-link-modal">
+                        <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Заказать звонок" -->
+    <div id="modal-call" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+            <p>Оставьте телефон, и мы свяжемся с Вами в течение 15 минут</p>
+            <div class="modal-inputs">
+                <input type="text" placeholder="+7 (___) ___-__-__">
+                <input type="text" placeholder="Название компании">
+            </div>
+            <label class="custom-checkbox">
+                <input type="checkbox" class="accept-input" hidden>
+                
+                <span class="checkbox-icon">
+                    <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                    <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                </span>
+
+                <div class="checkbox-text">
+                    Нажимая на кнопку, я принимаю условия <strong>Политики<br> конфиденциальности</strong>
+                </div>
+            </label>
+            <div class="submit-modal">
+                <a href="#" class="submit-button-modal">Отправить</a>
+                <a href="#" class="arrow-link-modal">
+                    <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Оставить заявку" -->
+    <div id="modal-req" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
+            <p>Оставьте Ваши данные, и мы свяжемся с вами в течение 15 минут</p>
+            <form id="modal-call-form">
+                <div class="modal-inputs-req">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя">
+                    <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <textarea id="comment" name="comment" placeholder="Ваш комментарий"></textarea>
+                </div>
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="accept-input" id="accept-policy" hidden>
+                    <span class="checkbox-icon">
+                        <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                        <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                    </span>
+                    <div class="checkbox-text">
+                        Нажимая на кнопку, я принимаю условия <strong>Политики конфиденциальности</strong>
+                    </div>
+                </label>
+                <div class="submit-modal">
+                    <a href="#" class="submit-button-modal">Отправить</a>
+                    <a href="#" class="arrow-link-modal">
+                        <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- модальное окно при успешной отправки формы -->
+    <div id="modal-success" class="modal">
+        <div class="modal-content-success">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <img class="like" src="../styles/images/Like.png" alt="">
+            <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
+            <p>Наш менеджер свяжется с Вами в течение 15 минут</p>
+            <div class="submit-modal-success">
+                <a href="#" class="submit-button-modal-success">Закрыть</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно ошибки -->
+    <div id="modal-error" class="modal">
+        <div class="modal-content-error">
+            <span class="close"><img src="../styles/images/svg/close.svg" alt=""></span>
+            <img class="error" src="../styles/images/Error.png" alt="">
+            <h2>ЧТО-ТО ПОШЛО НЕ ТАК</h2>
+            <p>Попробуйте отправить заявку еще раз</p>
+            <div class="submit-modal-error">
+                <a href="#" class="submit-button-modal-error">Заполнить форму</a>
+            </div>
+        </div>
     </div>
 
     <script src="../styles/scriptpProduct.js"></script>

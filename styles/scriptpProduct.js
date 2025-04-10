@@ -140,34 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Функция для управления конкретным модальным окном
-    function setupModal(modalId, buttonClass) {
-        const modal = document.getElementById(modalId);
-        const openModalBtn = document.querySelector(`.${buttonClass}`);
-        
-        if (!modal || !openModalBtn) return;
-
-        const closeModalBtn = modal.querySelector(".close");
-
-        openModalBtn.addEventListener("click", () => {
-            modal.style.display = "flex";
-        });
-
-        closeModalBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        window.addEventListener("click", (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    }
-
-    // Подключаем разные кнопки к своим окнам
-    setupModal("modal-call", "contact-button"); // "Заказать звонок"
-    setupModal("modal-req", "request-button");  // "Оставить заявку"
-
     // Чекбоксы для каждого окна
     document.querySelectorAll(".custom-checkbox").forEach((checkboxContainer) => {
         const checkbox = checkboxContainer.querySelector(".accept-input");
@@ -200,9 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    
-
     
     const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -228,8 +197,128 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         });
     });
-    
 
 
-    
+
+
+    // Универсальная функция открытия модалки
+    function openModal(modal) {
+        closeAllModals();
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Универсальная функция закрытия модалки
+    function closeModal(modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    // Закрытие всех модалок
+    function closeAllModals() {
+        [modalCall, modalReq, modalError, modalSuccess].forEach(m => m.style.display = 'none');
+        document.body.style.overflow = '';
+    }
+
+    let lastForm = null; // запоминаем, откуда была ошибка
+
+    // Модалка "Заказать звонок"
+    const callButton = document.querySelector('.contact-button');
+    const modalButtonBurger = document.querySelector('.callback-btn');
+    const modalButtonFooter = document.querySelector('.call-button-footer');
+    const modalButtonFooterMobile = document.querySelector('.call-button-footer-mobile');
+    const modalCall = document.getElementById('modal-call');
+    const closeModalCall = modalCall.querySelector('.close');
+
+    [callButton, modalButtonBurger, modalButtonFooter, modalButtonFooterMobile].forEach(btn => {
+        btn.addEventListener('click', () => openModal(modalCall));
+    });
+
+    closeModalCall.addEventListener('click', () => closeModal(modalCall));
+    window.addEventListener('click', e => { if (e.target === modalCall) closeModal(modalCall); });
+
+    // Модалка "Оставить заявку"
+    const requestButton = document.querySelector('.request-button');
+    const requestButtonRight = document.querySelector('.request-button-right');
+    const modalReq = document.getElementById('modal-req');
+    const closeModalReq = modalReq.querySelector('.close');
+
+    requestButton.addEventListener('click', e => {
+        e.preventDefault();
+        openModal(modalReq);
+    });
+
+    requestButtonRight.addEventListener('click', e => {
+        e.preventDefault();
+        openModal(modalReq);
+    });
+
+    closeModalReq.addEventListener('click', () => closeModal(modalReq));
+    window.addEventListener('click', e => { if (e.target === modalReq) closeModal(modalReq); });
+
+    // Ошибка и успех
+    const modalError = document.getElementById('modal-error');
+    const modalSuccess = document.getElementById('modal-success');
+    const errorRetryBtn = document.querySelector('.submit-button-modal-error');
+    const successCloseBtn = document.querySelector('.submit-button-modal-success');
+
+    // Кнопка "Закрыть" в успешной модалке
+    successCloseBtn.addEventListener('click', e => {
+        e.preventDefault();
+        closeAllModals();
+    });
+
+    // Кнопка "Заполнить форму ещё раз"
+    errorRetryBtn.addEventListener('click', e => {
+        e.preventDefault();
+        if (lastForm === 'call') {
+            openModal(modalCall);
+        } else if (lastForm === 'req') {
+            openModal(modalReq);
+        }
+    });
+
+    // === Форма "Заказать звонок" ===
+    const submitButton = document.querySelector('.submit-button-modal');
+    const phoneInput = modalCall.querySelector('input[placeholder^="+7"]');
+    const companyInput = modalCall.querySelector('input[placeholder="Название компании"]');
+    const checkbox = modalCall.querySelector('.accept-input');
+
+    submitButton.addEventListener('click', e => {
+        e.preventDefault();
+        const phone = phoneInput.value.trim();
+        const company = companyInput.value.trim();
+        const agreed = checkbox.checked;
+
+        if (!phone || !company || !agreed) {
+            lastForm = 'call';
+            openModal(modalError);
+        } else {
+            openModal(modalSuccess);
+        }
+    });
+
+    // === Форма "Оставить заявку" ===
+    const nameInput = document.getElementById('name');
+    const phoneReqInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const commentInput = document.getElementById('comment');
+    const policyCheckbox = document.getElementById('accept-policy');
+    const submitRequestBtn = modalReq.querySelector('.submit-button-modal');
+
+    submitRequestBtn.addEventListener('click', e => {
+        e.preventDefault();
+        const name = nameInput.value.trim();
+        const phone = phoneReqInput.value.trim();
+        const email = emailInput.value.trim();
+        const comment = commentInput.value.trim();
+        const agreed = policyCheckbox.checked;
+
+        if (!name || !phone || !email || !comment || !agreed) {
+            lastForm = 'req';
+            openModal(modalError);
+        } else {
+            openModal(modalSuccess);
+        }
+    });
 });

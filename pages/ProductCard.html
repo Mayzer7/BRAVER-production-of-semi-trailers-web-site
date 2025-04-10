@@ -7,18 +7,15 @@
     <title>BRAVER production - Карточка товара</title>
 </head>
 <body>
-    <header class="header">
+    <div class="main-page">
+        <header class="header">
             <div class="logo">
                 <a href="../pages/MainPage.html" class="logo-link">
                     <img src="../styles/images/LogoBraver.png" alt="Логотип">
                 </a>
                 <span>Производство<br>полуприцепов</span>
             </div>
-            <div class="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        
             <nav class="nav">
                 <div class="nav-item">
                     <a href="#" class="catalog-btn">Каталог <span class="dot">•</span></a>
@@ -61,6 +58,13 @@
             
                 <a href="#">Контакты</a>
             </nav>
+
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <div class="contact">
                 <span>8 (900) 777-77-77</span>
                 <button class="contact-button">Заказать звонок</button>
@@ -69,102 +73,778 @@
                     <button class="lang-button" data-lang="en">EN</button>
                 </div>
             </div>
-    </header>
+        </header>
 
-    <section class="product-card">
-        <div class="product-images">
-            <div class="product-image">
-                <!-- Стрелка влево -->
-                <button class="arrow-button arrow-left">
-                    <div class="arrow-container-left">
-                        <svg class="left-svg-arrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#202020"/>
-                            <path d="M27 17.3047L21.4882 22.8165C20.8373 23.4674 20.8373 24.5326 21.4882 25.1835L27 30.6953" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </button>
+        <section class="product-card">
+            <div class="product-images">
+                <div class="product-image">
+                    <!-- Стрелка влево -->
+                    <button class="arrow-button arrow-left">
+                        <div class="arrow-container-left">
+                            <svg class="left-svg-arrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#202020"/>
+                                <path d="M27 17.3047L21.4882 22.8165C20.8373 23.4674 20.8373 24.5326 21.4882 25.1835L27 30.6953" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </button>
 
-                <!-- Стрелка вправо -->
-                <button class="arrow-button-mobile arrow-right">
-                    <div class="arrow-container-right">
-                        <svg class="right-svg-arrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="24" fill="#202020"/>
-                            <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                    </div>
-                </button>
-    
-                <img src="../styles/images/Trailer.png" alt="Trailer">
-            </div>
+                    <!-- Стрелка вправо -->
+                    <button class="arrow-button-mobile arrow-right">
+                        <div class="arrow-container-right">
+                            <svg class="right-svg-arrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="24" fill="#202020"/>
+                                <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                        </div>
+                    </button>
         
-            <div class="product-image">
-                <!-- Стрелка вправо -->
-                <button class="arrow-button arrow-right">
-                    <div class="arrow-container-right">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="24" fill="#202020"/>
-                            <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <img src="../styles/images/Trailer.png" alt="Trailer">
+                </div>
+            
+                <div class="product-image">
+                    <!-- Стрелка вправо -->
+                    <button class="arrow-button arrow-right">
+                        <div class="arrow-container-right">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="24" fill="#202020"/>
+                                <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                        </div>
+                    </button>
+        
+                    <img class="video-img" src="../styles/images/TrailerVideo.png" alt="Trailer Video">
+                
+                    <!-- Кнопка проигрывания -->
+                    <div class="play-button-container">
+                        <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 9.26795C19.3333 10.0377 19.3333 11.9623 18 12.7321L3 21.3923C1.66666 22.1621 -1.05781e-06 21.1999 -9.90511e-07 19.6603L-2.33408e-07 2.33975C-1.6611e-07 0.800144 1.66667 -0.162106 3 0.607695L18 9.26795Z" fill="#202020"/>
                         </svg>    
                     </div>
-                </button>
-    
-                <img class="video-img" src="../styles/images/TrailerVideo.png" alt="Trailer Video">
-            
-                <!-- Кнопка проигрывания -->
-                <div class="play-button-container">
-                    <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 9.26795C19.3333 10.0377 19.3333 11.9623 18 12.7321L3 21.3923C1.66666 22.1621 -1.05781e-06 21.1999 -9.90511e-07 19.6603L-2.33408e-07 2.33975C-1.6611e-07 0.800144 1.66667 -0.162106 3 0.607695L18 9.26795Z" fill="#202020"/>
-                    </svg>    
                 </div>
             </div>
-        </div>
 
-        <div class="product-info">
-            <div class="product-info-left">
-                <nav class="breadcrumbs">   
-                    <a href="#">Главная</a>
-                    <span>›</span>
-                    <a href="#">Каталог</a>
-                    <span>›</span>
-                    <a href="#">Зерновозы</a>
-                    <span>›</span>
-                    <span class="current">Зерновозы бортовые 46–60 м³ с вынесенной осью</span>
-                </nav>
-                
-                <nav class="breadcrumbs mob">   
-                    <a href="#">Главная</a>
-                    <span>›</span>
-                    <a href="#">...</a>
-                    <span>›</span>
-                    <span class="current">Зерновозы бортовые 46–60 м³ с вынесенной осью</span>
-                </nav>
-
-                <div class="product-title">
-                    ЗЕРНОВОЗЫ БОРТОВЫЕ 46-60 М³ С ВЫНЕСЕННОЙ ОСЬЮ
-                </div>
-
-                <div class="product-info-right mobile">
-                    <div class="product-info-card">
-                        <div class="info-row">
-                          <span class="label">Объём</span>
-                          <span class="value">46 - 60³</span>
-                        </div>
-                        <div class="info-row">
-                          <span class="label">Количество осей</span>
-                          <span class="value">3 оси</span>
-                        </div>
-                        <div class="info-row">
-                          <span class="label">Снаряженная масса</span>
-                          <span class="value">от 5 900 кг</span>
-                        </div>
-                        <div class="info-row no-border">
-                          <span class="label">Стоимость</span>
-                          <span class="value cost">4 120 000 ₽</span>
-                        </div>
+            <div class="product-info">
+                <div class="product-info-left">
+                    <nav class="breadcrumbs">   
+                        <a href="#">Главная</a>
+                        <span>›</span>
+                        <a href="#">Каталог</a>
+                        <span>›</span>
+                        <a href="#">Зерновозы</a>
+                        <span>›</span>
+                        <span class="current">Зерновозы бортовые 46–60 м³ с вынесенной осью</span>
+                    </nav>
                     
-                        <div class="tech-link">Технические характеристики</div>
+                    <nav class="breadcrumbs mob">   
+                        <a href="#">Главная</a>
+                        <span>›</span>
+                        <a href="#">...</a>
+                        <span>›</span>
+                        <span class="current">Зерновозы бортовые 46–60 м³ с вынесенной осью</span>
+                    </nav>
+
+                    <div class="product-title">
+                        ЗЕРНОВОЗЫ БОРТОВЫЕ 46-60 М³ С ВЫНЕСЕННОЙ ОСЬЮ
                     </div>
-                    
+
+                    <div class="product-info-right mobile">
+                        <div class="product-info-card">
+                            <div class="info-row">
+                            <span class="label">Объём</span>
+                            <span class="value">46 - 60³</span>
+                            </div>
+                            <div class="info-row">
+                            <span class="label">Количество осей</span>
+                            <span class="value">3 оси</span>
+                            </div>
+                            <div class="info-row">
+                            <span class="label">Снаряженная масса</span>
+                            <span class="value">от 5 900 кг</span>
+                            </div>
+                            <div class="info-row no-border">
+                            <span class="label">Стоимость</span>
+                            <span class="value cost">4 120 000 ₽</span>
+                            </div>
+                        
+                            <div class="tech-link">Технические характеристики</div>
+                        </div>
+                        
+                        <div class="product-info-buttons">
+                            <div class="submit-app">
+                                <a href="#" class="request-button">Оставить заявку</a>
+                                <a href="">
+                                    <img src="../styles/images/svg/arrow-bg-black.svg" alt="">
+                                </a>
+                            </div>
+                        
+                            <div class="submit-app">
+                                <a href="#" class="get-consult-mobile">Оставить заявку</a>
+                                <a href="">
+                                    <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="product-about">
+                        О полуприцепе
+                    </div>
+
+                    <div class="product-description">
+                        <div class="desc-one">
+                            Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова<br> равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900<br> граммов на квадратный метр. Данный полуприцеп шторно-бортовой (крыша и бока полуприцепа сдвигаются отдельно),<br> что очень удобно при погрузке-разгрузке как с боков полуприцепа, так и с верхней части. Для большего комфорта<br> эксплуатации, с наружной стороны имеется специальная ручка предназначенная для сдвигания бокового тента.
+                        </div>
+
+                        <div class="desc-two">
+                            Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова<br> равен 110,6 кубическим метрам.
+                        </div>
+                    </div>
+
+                    <div class="product-card-image">
+                        <img src="../styles/images/ProductCardImage.png" alt="">
+                    </div>
+
+                    <div class="product-card-choice-settings">
+                        <div class="choice-settings-navbar">
+                            <div class="tech-settings active" onclick="switchTab('tech-settings')">
+                                <div class="dot"></div>
+                                <span>Технические характеристики</span>
+                                <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                        stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                
+                                
+                                
+                            </div>
+
+                            <div class="tech-settings" onclick="switchTab('tech-complete')">
+                                <div class="dot"></div>
+                                <span>Комплектация</span>
+                                <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                        stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <div class="tech-settings" onclick="switchTab('tech-doc')">
+                                <div class="dot"></div>
+                                <span>Техническая документация</span>
+                                <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                        stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="choice-settings-container">
+                            <!-- Технические характеристики -->
+                            <div class="choice-tech-settings active" id="tech-settings">
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Габаритные размеры
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            длина: 12 100 мм<br>
+                                            ширина: 2 550 мм<br>
+                                            высота: 3 310 мм
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+            
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Объём
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            46 - 60³
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Количество осей
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            4 оси
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Снаряженная масса
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            от 7 200 кг
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Количество секций
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            1 секция: 8 м³<br>
+                                            2 секция: 10,3 м³<br>
+                                            3 секция: 13,7 м³<br>
+                                            Объемы секций указаны по порядку от ССУ
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Подвеска и шины
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            4 оси<br>
+                                            2 оси подъёмные<br>
+                                            тормозные механизмы барабанного / дискового типа<br>
+                                            шины (на усмотрение производителя) размерностью<br> 
+                                            385/65 R22,5 с диском - 8 + 1 шт.
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Тормозная система
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            пневматическая двухконтурная
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name-pc">
+                                            Электрооборудование
+                                        </div>
+
+                                        <div class="settings-name-mobile">
+                                            Электро-<br>оборудование
+                                        </div>
+            
+                                        <div class="settings-value-pc">
+                                            электрооборудование Aspoeck / Hella / Ermax или аналог
+                                        </div>
+
+                                        <div class="settings-value-mobile">
+                                            электро-<br>оборудование Aspoeck / Hella / Ermax или аналог
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Высота ССУ
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            1 150 мм
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Окраска
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            обработка поверхности в дробеструйной камере<br>
+                                            покрытие грунтом с содержанием антикоррозийных элементов<br>
+                                            окраска премиальной эмалью
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Комплектация -->
+                            <div class="choice-tech-settings hidden" id="tech-complete">
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Инструментальный ящик</div>
+                                        <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Запасное колесо</div>
+                                        <div class="settings-value">1 шт., крепление с держателем</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Лестница обслуживания</div>
+                                        <div class="settings-value">складная, боковое размещение</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Защита от бокового удара</div>
+                                        <div class="settings-value">алюминиевые щиты с усилением</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Крылья колес</div>
+                                        <div class="settings-value">пластиковые, индивидуальные над каждой осью</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Противооткатные упоры</div>
+                                        <div class="settings-value">2 шт., в держателях</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Кронштейн под номерной знак</div>
+                                        <div class="settings-value">с подсветкой, на заднем щите</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Огнетушитель</div>
+                                        <div class="settings-value">6 кг, порошковый, с кронштейном</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Техническая документация -->
+                            <div class="choice-tech-settings hidden" id="tech-doc">
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Руководство по эксплуатации</div>
+                                        <div class="settings-value">PDF, на русском языке, содержит полные инструкции по работе и обслуживанию</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Сертификат соответствия</div>
+                                        <div class="settings-value">в соответствии с ТР ТС 018/2011</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Паспорт изделия</div>
+                                        <div class="settings-value">с указанием заводского номера, даты выпуска и характеристик</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Схема электрооборудования</div>
+                                        <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Инструкция по покраске</div>
+                                        <div class="settings-value">описание используемых материалов и технологии нанесения покрытия</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card-choice-settings-mobile">
+                        <div class="choice-settings-navbar">
+                            <div class="tech-settings active" onclick="switchTab('tech-settings')">
+                                <div class="dot"></div>
+                                <span>Технические характеристики</span>
+                                <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                        stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <!-- Технические характеристики -->
+                            <div class="choice-tech-settings active" id="tech-settings">
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Габаритные размеры
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            длина: 12 100 мм<br>
+                                            ширина: 2 550 мм<br>
+                                            высота: 3 310 мм
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+            
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Объём
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            46 - 60³
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Количество осей
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            4 оси
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Снаряженная масса
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            от 7 200 кг
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Количество секций
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            1 секция: 8 м³<br>
+                                            2 секция: 10,3 м³<br>
+                                            3 секция: 13,7 м³<br>
+                                            Объемы секций указаны по порядку от ССУ
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Подвеска и шины
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            4 оси<br>
+                                            2 оси подъёмные<br>
+                                            тормозные механизмы барабанного / дискового типа<br>
+                                            шины (на усмотрение производителя) размерностью<br> 
+                                            385/65 R22,5 с диском - 8 + 1 шт.
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Тормозная система
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            пневматическая двухконтурная
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name-pc">
+                                            Электрооборудование
+                                        </div>
+
+                                        <div class="settings-name-mobile">
+                                            Электро-<br>оборудование
+                                        </div>
+            
+                                        <div class="settings-value-pc">
+                                            электрооборудование Aspoeck / Hella / Ermax или аналог
+                                        </div>
+
+                                        <div class="settings-value-mobile">
+                                            электро-<br>оборудование Aspoeck / Hella / Ermax или аналог
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Высота ССУ
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            1 150 мм
+                                        </div>
+                                    </div>
+            
+                                    <div class="settings-line"></div>
+                                </div>
+        
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">
+                                            Окраска
+                                        </div>
+            
+                                        <div class="settings-value">
+                                            обработка поверхности в дробеструйной камере<br>
+                                            покрытие грунтом с содержанием антикоррозийных элементов<br>
+                                            окраска премиальной эмалью
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tech-settings" onclick="switchTab('tech-complete')">
+                                <div class="dot"></div>
+                                <span>Комплектация</span>
+                                <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                        stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <!-- Комплектация -->
+                            <div class="choice-tech-settings hidden" id="tech-complete">
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Инструментальный ящик</div>
+                                        <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Запасное колесо</div>
+                                        <div class="settings-value">1 шт., крепление с держателем</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Лестница обслуживания</div>
+                                        <div class="settings-value">складная, боковое размещение</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Защита от бокового удара</div>
+                                        <div class="settings-value">алюминиевые щиты с усилением</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Крылья колес</div>
+                                        <div class="settings-value">пластиковые, индивидуальные над каждой осью</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Противооткатные упоры</div>
+                                        <div class="settings-value">2 шт., в держателях</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Кронштейн под номерной знак</div>
+                                        <div class="settings-value">с подсветкой, на заднем щите</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Огнетушитель</div>
+                                        <div class="settings-value">6 кг, порошковый, с кронштейном</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tech-settings" onclick="switchTab('tech-doc')">
+                                <div class="dot"></div>
+                                <span>Техническая документация</span>
+                                <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
+                                        stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <!-- Техническая документация -->
+                            <div class="choice-tech-settings hidden" id="tech-doc">
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Руководство по эксплуатации</div>
+                                        <div class="settings-value">PDF, на русском языке, содержит полные инструкции по работе и обслуживанию</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Сертификат соответствия</div>
+                                        <div class="settings-value">в соответствии с ТР ТС 018/2011</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Паспорт изделия</div>
+                                        <div class="settings-value">с указанием заводского номера, даты выпуска и характеристик</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Схема электрооборудования</div>
+                                        <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
+                                    </div>
+                                    <div class="settings-line"></div>
+                                </div>
+
+                                <div class="choise-settings-desc">
+                                    <div class="settings-info">
+                                        <div class="settings-name">Инструкция по покраске</div>
+                                        <div class="settings-value">описание используемых материалов и технологии нанесения покрытия</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-info-right desktop">
+                    <div class="product-info-card">
+                    <div class="info-row">
+                        <span class="label">Объём</span>
+                        <span class="value">46 - 60³</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Количество осей</span>
+                        <span class="value">3 оси</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Снаряженная масса</span>
+                        <span class="value">от 5 900 кг</span>
+                    </div>
+                    <div class="info-row no-border">
+                        <span class="label">Стоимость</span>
+                        <span class="value cost">4 120 000 ₽</span>
+                    </div>
+                
+                    <div class="tech-link">Технические характеристики</div>
+                    </div>
+                
                     <div class="product-info-buttons">
                         <div class="submit-app">
                             <a href="#" class="request-button">Оставить заявку</a>
@@ -174,1213 +854,657 @@
                         </div>
                     
                         <div class="submit-app">
-                            <a href="#" class="get-consult-mobile">Оставить заявку</a>
+                            <a href="#" class="get-consultation">Получить консультацию</a>
                             <a href="">
                                 <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
                             </a>
                         </div>
                     </div>
-                </div>  
-
-                <div class="product-about">
-                    О полуприцепе
                 </div>
+            </div>
 
-                <div class="product-description">
-                    <div class="desc-one">
-                        Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова<br> равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900<br> граммов на квадратный метр. Данный полуприцеп шторно-бортовой (крыша и бока полуприцепа сдвигаются отдельно),<br> что очень удобно при погрузке-разгрузке как с боков полуприцепа, так и с верхней части. Для большего комфорта<br> эксплуатации, с наружной стороны имеется специальная ручка предназначенная для сдвигания бокового тента.
+            <hr class="divider">
+
+            <div class="shipping-information">
+                <div class="accordion">
+                    <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <span class="number">01</span>
+                        <span class="title">ДОСТАВКА</span>
+                        <button class="toggle-btn">
+                        <!-- Стрелка для состояния "закрыто" (по умолчанию) -->
+                        <svg class="arrow-closed" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
+                            <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <!-- Стрелка для состояния "открыто" -->
+                        <svg class="arrow-open" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="43" height="43" rx="8" fill="#202020"/>
+                            <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
                     </div>
-
-                    <div class="desc-two">
-                        Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова<br> равен 110,6 кубическим метрам.
+                    <div class="accordion-content">
+                        <p>Компания Braver доставит прицепную технику до адреса вашей компании,<br> условия доставки обсуждаются индивидуально с учётом количества<br> приобретаемой техники и вашей территориальной удалённости.</p>
+                        <p><strong>Мы доставляем в города:</strong></p>
+                        <ul>
+                        <li>Москва</li>
+                        <li>Санкт-Петербург</li>
+                        <li>Нижний Новгород</li>
+                        <li>Екатеринбург</li>
+                        <li>Владивосток</li>
+                        <li>Новосибирск</li>
+                        <li>Казань</li>
+                        <li>Киров</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="product-card-image">
-                    <img src="../styles/images/ProductCardImage.png" alt="">
-                </div>
-
-                <div class="product-card-choice-settings">
-                    <div class="choice-settings-navbar">
-                        <div class="tech-settings active" onclick="switchTab('tech-settings')">
-                            <div class="dot"></div>
-                            <span>Технические характеристики</span>
-                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
-                                    stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                            
-                            
-                            
-                        </div>
-
-                        <div class="tech-settings" onclick="switchTab('tech-complete')">
-                            <div class="dot"></div>
-                            <span>Комплектация</span>
-                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
-                                    stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <div class="tech-settings" onclick="switchTab('tech-doc')">
-                            <div class="dot"></div>
-                            <span>Техническая документация</span>
-                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
-                                    stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
                     </div>
-
-                    
-
-                    <div class="choice-settings-container">
-                        <!-- Технические характеристики -->
-                        <div class="choice-tech-settings active" id="tech-settings">
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Габаритные размеры
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        длина: 12 100 мм<br>
-                                        ширина: 2 550 мм<br>
-                                        высота: 3 310 мм
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-        
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Объём
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        46 - 60³
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Количество осей
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        4 оси
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Снаряженная масса
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        от 7 200 кг
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Количество секций
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        1 секция: 8 м³<br>
-                                        2 секция: 10,3 м³<br>
-                                        3 секция: 13,7 м³<br>
-                                        Объемы секций указаны по порядку от ССУ
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Подвеска и шины
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        4 оси<br>
-                                        2 оси подъёмные<br>
-                                        тормозные механизмы барабанного / дискового типа<br>
-                                        шины (на усмотрение производителя) размерностью<br> 
-                                        385/65 R22,5 с диском - 8 + 1 шт.
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Тормозная система
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        пневматическая двухконтурная
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name-pc">
-                                        Электрооборудование
-                                    </div>
-
-                                    <div class="settings-name-mobile">
-                                        Электро-<br>оборудование
-                                    </div>
-        
-                                    <div class="settings-value-pc">
-                                        электрооборудование Aspoeck / Hella / Ermax или аналог
-                                    </div>
-
-                                    <div class="settings-value-mobile">
-                                        электро-<br>оборудование Aspoeck / Hella / Ermax или аналог
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Высота ССУ
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        1 150 мм
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Окраска
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        обработка поверхности в дробеструйной камере<br>
-                                        покрытие грунтом с содержанием антикоррозийных элементов<br>
-                                        окраска премиальной эмалью
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Комплектация -->
-                        <div class="choice-tech-settings hidden" id="tech-complete">
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Инструментальный ящик</div>
-                                    <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Запасное колесо</div>
-                                    <div class="settings-value">1 шт., крепление с держателем</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Лестница обслуживания</div>
-                                    <div class="settings-value">складная, боковое размещение</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Защита от бокового удара</div>
-                                    <div class="settings-value">алюминиевые щиты с усилением</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Крылья колес</div>
-                                    <div class="settings-value">пластиковые, индивидуальные над каждой осью</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Противооткатные упоры</div>
-                                    <div class="settings-value">2 шт., в держателях</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Кронштейн под номерной знак</div>
-                                    <div class="settings-value">с подсветкой, на заднем щите</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Огнетушитель</div>
-                                    <div class="settings-value">6 кг, порошковый, с кронштейном</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Техническая документация -->
-                        <div class="choice-tech-settings hidden" id="tech-doc">
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Руководство по эксплуатации</div>
-                                    <div class="settings-value">PDF, на русском языке, содержит полные инструкции по работе и обслуживанию</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Сертификат соответствия</div>
-                                    <div class="settings-value">в соответствии с ТР ТС 018/2011</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Паспорт изделия</div>
-                                    <div class="settings-value">с указанием заводского номера, даты выпуска и характеристик</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Схема электрооборудования</div>
-                                    <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Инструкция по покраске</div>
-                                    <div class="settings-value">описание используемых материалов и технологии нанесения покрытия</div>
-                                </div>
-                            </div>
-                        </div>
+                
+                    <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="number">02</span>
+                        <span class="title">ОПЛАТА</span>
+                        <button class="toggle-btn">
+                        <!-- Стрелка для состояния "закрыто" -->
+                        <svg class="arrow-closed" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
+                            <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <!-- Стрелка для состояния "открыто" -->
+                        <svg class="arrow-open" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="43" height="43" rx="8" fill="#202020"/>
+                            <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
                     </div>
-                </div>
-
-                <div class="product-card-choice-settings-mobile">
-                    <div class="choice-settings-navbar">
-                        <div class="tech-settings active" onclick="switchTab('tech-settings')">
-                            <div class="dot"></div>
-                            <span>Технические характеристики</span>
-                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
-                                    stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <!-- Технические характеристики -->
-                        <div class="choice-tech-settings active" id="tech-settings">
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Габаритные размеры
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        длина: 12 100 мм<br>
-                                        ширина: 2 550 мм<br>
-                                        высота: 3 310 мм
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-        
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Объём
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        46 - 60³
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Количество осей
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        4 оси
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Снаряженная масса
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        от 7 200 кг
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Количество секций
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        1 секция: 8 м³<br>
-                                        2 секция: 10,3 м³<br>
-                                        3 секция: 13,7 м³<br>
-                                        Объемы секций указаны по порядку от ССУ
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Подвеска и шины
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        4 оси<br>
-                                        2 оси подъёмные<br>
-                                        тормозные механизмы барабанного / дискового типа<br>
-                                        шины (на усмотрение производителя) размерностью<br> 
-                                        385/65 R22,5 с диском - 8 + 1 шт.
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Тормозная система
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        пневматическая двухконтурная
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name-pc">
-                                        Электрооборудование
-                                    </div>
-
-                                    <div class="settings-name-mobile">
-                                        Электро-<br>оборудование
-                                    </div>
-        
-                                    <div class="settings-value-pc">
-                                        электрооборудование Aspoeck / Hella / Ermax или аналог
-                                    </div>
-
-                                    <div class="settings-value-mobile">
-                                        электро-<br>оборудование Aspoeck / Hella / Ermax или аналог
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Высота ССУ
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        1 150 мм
-                                    </div>
-                                </div>
-        
-                                <div class="settings-line"></div>
-                            </div>
-    
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">
-                                        Окраска
-                                    </div>
-        
-                                    <div class="settings-value">
-                                        обработка поверхности в дробеструйной камере<br>
-                                        покрытие грунтом с содержанием антикоррозийных элементов<br>
-                                        окраска премиальной эмалью
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tech-settings" onclick="switchTab('tech-complete')">
-                            <div class="dot"></div>
-                            <span>Комплектация</span>
-                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
-                                    stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <!-- Комплектация -->
-                        <div class="choice-tech-settings hidden" id="tech-complete">
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Инструментальный ящик</div>
-                                    <div class="settings-value">1 шт., пластиковый, объём 60 л</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Запасное колесо</div>
-                                    <div class="settings-value">1 шт., крепление с держателем</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Лестница обслуживания</div>
-                                    <div class="settings-value">складная, боковое размещение</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Защита от бокового удара</div>
-                                    <div class="settings-value">алюминиевые щиты с усилением</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Крылья колес</div>
-                                    <div class="settings-value">пластиковые, индивидуальные над каждой осью</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Противооткатные упоры</div>
-                                    <div class="settings-value">2 шт., в держателях</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Кронштейн под номерной знак</div>
-                                    <div class="settings-value">с подсветкой, на заднем щите</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Огнетушитель</div>
-                                    <div class="settings-value">6 кг, порошковый, с кронштейном</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tech-settings" onclick="switchTab('tech-doc')">
-                            <div class="dot"></div>
-                            <span>Техническая документация</span>
-                            <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1.10986L11 11.1099M11 11.1099L11 1.10986M11 11.1099L1 11.1099"
-                                    stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <!-- Техническая документация -->
-                        <div class="choice-tech-settings hidden" id="tech-doc">
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Руководство по эксплуатации</div>
-                                    <div class="settings-value">PDF, на русском языке, содержит полные инструкции по работе и обслуживанию</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Сертификат соответствия</div>
-                                    <div class="settings-value">в соответствии с ТР ТС 018/2011</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Паспорт изделия</div>
-                                    <div class="settings-value">с указанием заводского номера, даты выпуска и характеристик</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Схема электрооборудования</div>
-                                    <div class="settings-value">в виде чертежа и табличной части, с расшифровкой соединений</div>
-                                </div>
-                                <div class="settings-line"></div>
-                            </div>
-
-                            <div class="choise-settings-desc">
-                                <div class="settings-info">
-                                    <div class="settings-name">Инструкция по покраске</div>
-                                    <div class="settings-value">описание используемых материалов и технологии нанесения покрытия</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="accordion-content">
+                        <p>Мы принимаем оплату через различные способы, включая банковские карты<br> и электронные кошельки. Условия оплаты оговариваются при оформлении заказа.</p>
+                        <p><strong>Методы оплаты:</strong></p>
+                        <ul>
+                            <li>Система быстрых платежей (СБП)</li>
+                            <li>Сбербанк Онлайн</li>
+                            <li>СберPay</li>
+                            <li>Тинькофф Онлайн</li>
+                            <li>ЮMoney</li>
+                            <li>QIWI</li>
+                            <li>WebMoney</li>
+                            <li>Яндекс.Деньги</li>
+                        </ul>
+                    </div>
+                    </div>
+                
+                    <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="number">03</span>
+                        <span class="title">ГАРАНТИИ</span>
+                        <button class="toggle-btn">
+                        <!-- Стрелка для состояния "закрыто" -->
+                        <svg class="arrow-closed" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
+                            <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <!-- Стрелка для состояния "открыто" -->
+                        <svg class="arrow-open" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="43" height="43" rx="8" fill="#202020"/>
+                            <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Мы предоставляем гарантию на все наши товары. Срок гарантии зависит от типа техники и условий договора.</p>
+                    </div>
                     </div>
                 </div>
             </div>
             
-            <div class="product-info-right desktop">
-                <div class="product-info-card">
-                  <div class="info-row">
-                    <span class="label">Объём</span>
-                    <span class="value">46 - 60³</span>
-                  </div>
-                  <div class="info-row">
-                    <span class="label">Количество осей</span>
-                    <span class="value">3 оси</span>
-                  </div>
-                  <div class="info-row">
-                    <span class="label">Снаряженная масса</span>
-                    <span class="value">от 5 900 кг</span>
-                  </div>
-                  <div class="info-row no-border">
-                    <span class="label">Стоимость</span>
-                    <span class="value cost">4 120 000 ₽</span>
-                  </div>
-              
-                  <div class="tech-link">Технические характеристики</div>
-                </div>
-              
-                <div class="product-info-buttons">
-                    <div class="submit-app">
-                        <a href="#" class="request-button">Оставить заявку</a>
-                        <a href="">
-                            <img src="../styles/images/svg/arrow-bg-black.svg" alt="">
-                        </a>
-                    </div>
-                
-                    <div class="submit-app">
-                        <a href="#" class="get-consultation">Получить консультацию</a>
-                        <a href="">
-                            <img src="../styles/images/svg/arrow-bg-gray.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr class="divider">
-
-        <div class="shipping-information">
-            <div class="accordion">
-                <div class="accordion-item active">
-                  <div class="accordion-header">
-                    <span class="number">01</span>
-                    <span class="title">ДОСТАВКА</span>
-                    <button class="toggle-btn">
-                      <!-- Стрелка для состояния "закрыто" (по умолчанию) -->
-                      <svg class="arrow-closed" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
-                        <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <!-- Стрелка для состояния "открыто" -->
-                      <svg class="arrow-open" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="43" height="43" rx="8" fill="#202020"/>
-                        <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="accordion-content">
-                    <p>Компания Braver доставит прицепную технику до адреса вашей компании,<br> условия доставки обсуждаются индивидуально с учётом количества<br> приобретаемой техники и вашей территориальной удалённости.</p>
-                    <p><strong>Мы доставляем в города:</strong></p>
-                    <ul>
-                      <li>Москва</li>
-                      <li>Санкт-Петербург</li>
-                      <li>Нижний Новгород</li>
-                      <li>Екатеринбург</li>
-                      <li>Владивосток</li>
-                      <li>Новосибирск</li>
-                      <li>Казань</li>
-                      <li>Киров</li>
-                    </ul>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <span class="number">02</span>
-                    <span class="title">ОПЛАТА</span>
-                    <button class="toggle-btn">
-                      <!-- Стрелка для состояния "закрыто" -->
-                      <svg class="arrow-closed" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
-                        <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <!-- Стрелка для состояния "открыто" -->
-                      <svg class="arrow-open" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="43" height="43" rx="8" fill="#202020"/>
-                        <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="accordion-content">
-                    <p>Мы принимаем оплату через различные способы, включая банковские карты<br> и электронные кошельки. Условия оплаты оговариваются при оформлении заказа.</p>
-                    <p><strong>Методы оплаты:</strong></p>
-                    <ul>
-                        <li>Система быстрых платежей (СБП)</li>
-                        <li>Сбербанк Онлайн</li>
-                        <li>СберPay</li>
-                        <li>Тинькофф Онлайн</li>
-                        <li>ЮMoney</li>
-                        <li>QIWI</li>
-                        <li>WebMoney</li>
-                        <li>Яндекс.Деньги</li>
-                    </ul>
-                  </div>
-                </div>
-              
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <span class="number">03</span>
-                    <span class="title">ГАРАНТИИ</span>
-                    <button class="toggle-btn">
-                      <!-- Стрелка для состояния "закрыто" -->
-                      <svg class="arrow-closed" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="43" height="43" rx="8" fill="#F4F4F4"/>
-                        <path d="M13.5 13.5L29.5 29.5M29.5 29.5L29.5 13.5M29.5 29.5L13.5 29.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <!-- Стрелка для состояния "открыто" -->
-                      <svg class="arrow-open" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="43" height="43" rx="8" fill="#202020"/>
-                        <path d="M13.5 29.5L29.5 13.5M29.5 13.5L13.5 13.5M29.5 13.5L29.5 29.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="accordion-content">
-                    <p>Мы предоставляем гарантию на все наши товары. Срок гарантии зависит от типа техники и условий договора.</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="might-be-interesting">
-            <div class="might-be-interesting-header">
-                <h1>МОЖЕТ БЫТЬ ИНТЕРЕСНО</h1>
-        
-                <div class="might-be-interesting-arrows">
-                    <button class="arrow-button">
-                        <svg class="left-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#202020"/>
-                            <path d="M27 17.3047L21.4882 22.8165C20.8373 23.4674 20.8373 24.5326 21.4882 25.1835L27 30.6953" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+            <div class="might-be-interesting">
+                <div class="might-be-interesting-header">
+                    <h1>МОЖЕТ БЫТЬ ИНТЕРЕСНО</h1>
             
-                    <button class="arrow-button">
-                        <svg class="right-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="24" fill="#202020"/>
-                            <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="might-be-interesting-cards">
-                <div class="might-be-interesting-card">
-                  <div class="card-top">
-                    <img class="card-first-img" src="../styles/images/TrailerGray.png" alt="">
-                  </div>
-              
-                  <div class="card-content">
-                    <h1>Зерновозы бортовые 46–60 м3 с вынесенной<br> осью</h1>
+                    <div class="might-be-interesting-arrows">
+                        <button class="arrow-button">
+                            <svg class="left-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#202020"/>
+                                <path d="M27 17.3047L21.4882 22.8165C20.8373 23.4674 20.8373 24.5326 21.4882 25.1835L27 30.6953" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                 
-                    <div class="specs">
-                        <div class="spec-row">
-                          <span>Объём</span>
-                          <span>46 – 60³</span>
-                        </div>
-                        <hr class="divider2">
-                      
-                        <div class="spec-row">
-                          <span>Количество осей</span>
-                          <span>3 оси</span>
-                        </div>
-    
-                        <hr class="divider2">
-                      
-                        <div class="spec-row">
-                          <span>Снаряженная масса</span>
-                          <span>от 5 900 кг</span>
-                        </div>
+                        <button class="arrow-button">
+                            <svg class="right-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="24" fill="#202020"/>
+                                <path d="M21 30.6953L26.5118 25.1835C27.1627 24.5326 27.1627 23.4674 26.5118 22.8165L21 17.3047" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                  </div>
                 </div>
 
-                <div class="might-be-interesting-card">
+                <div class="might-be-interesting-cards">
+                    <div class="might-be-interesting-card">
                     <div class="card-top">
-                      <img class="card-second-img" src="../styles/images/Trailer.png" alt="">
-                      <div class="availability">В наличии</div>
+                        <img class="card-first-img" src="../styles/images/TrailerGray.png" alt="">
                     </div>
                 
                     <div class="card-content">
-                      <h1>Бортовой полуприцеп 13,62 м</h1>
-                  
-                      <div class="specs">
-                          <div class="spec-row">
-                            <span>Объём</span>
-                            <span>46 – 60³</span>
-                          </div>
-                          <hr class="divider2">
-                        
-                          <div class="spec-row">
-                            <span>Количество осей</span>
-                            <span>3 оси</span>
-                          </div>
-      
-                          <hr class="divider2">
-                        
-                          <div class="spec-row">
-                            <span>Снаряженная масса</span>
-                            <span>от 5 900 кг</span>
-                          </div>
-
-                          <hr class="divider2">
-
-                          <div class="spec-row">
-                            <span>Стоимость</span>
-                            <div class="price">4 120 000 ₽</div>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="might-be-interesting-card">
-                    <div class="card-top">
-                      <img class="card-last-img" src="../styles/images/TrailerYellow.png" alt="">
-                    </div>
-                
-                    <div class="card-content">
-                      <h1>Облегченные зерновозы бортовые 46-60 м3</h1>
-                  
-                      <div class="specs">
-                          <div class="spec-row">
-                            <span>Объём</span>
-                            <span>46 – 60³</span>
-                          </div>
-                          <hr class="divider2">
-                        
-                          <div class="spec-row">
-                            <span>Количество осей</span>
-                            <span>3 оси</span>
-                          </div>
-      
-                          <hr class="divider2">
-                        
-                          <div class="spec-row">
-                            <span>Снаряженная масса</span>
-                            <span>от 5 900 кг</span>
-                          </div>
-
-                          <hr class="divider2">
-
-                          <div class="spec-row">
-                            <span>Стоимость</span>
-                            <div class="price">4 120 000 ₽</div>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="reviews">
-            <div class="reviews-header">
-                <h1>ОТЗЫВЫ</h1>
-                <a href="#">Читать все отзывы</a>
-            </div>
-        
-            <div class="review-cards">
-                <div class="review-card">
-                    <img class="review-image" src="../styles/images/review.png" alt="Отзыв">
+                        <h1>Зерновозы бортовые 46–60 м3 с вынесенной<br> осью</h1>
                     
-                    <div class="review-content">
-                        <h3>Имя Фамилия / Название компании</h3>
-                        <p>Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр.</p>
-                        <a href="#">Подробнее</a>
+                        <div class="specs">
+                            <div class="spec-row">
+                            <span>Объём</span>
+                            <span>46 – 60³</span>
+                            </div>
+                            <hr class="divider2">
+                        
+                            <div class="spec-row">
+                            <span>Количество осей</span>
+                            <span>3 оси</span>
+                            </div>
+        
+                            <hr class="divider2">
+                        
+                            <div class="spec-row">
+                            <span>Снаряженная масса</span>
+                            <span>от 5 900 кг</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="might-be-interesting-card">
+                        <div class="card-top">
+                        <img class="card-second-img" src="../styles/images/Trailer.png" alt="">
+                        <div class="availability">В наличии</div>
+                        </div>
+                    
+                        <div class="card-content">
+                        <h1>Бортовой полуприцеп 13,62 м</h1>
+                    
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span>Объём</span>
+                                <span>46 – 60³</span>
+                            </div>
+                            <hr class="divider2">
+                            
+                            <div class="spec-row">
+                                <span>Количество осей</span>
+                                <span>3 оси</span>
+                            </div>
+        
+                            <hr class="divider2">
+                            
+                            <div class="spec-row">
+                                <span>Снаряженная масса</span>
+                                <span>от 5 900 кг</span>
+                            </div>
+
+                            <hr class="divider2">
+
+                            <div class="spec-row">
+                                <span>Стоимость</span>
+                                <div class="price">4 120 000 ₽</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="might-be-interesting-card">
+                        <div class="card-top">
+                        <img class="card-last-img" src="../styles/images/TrailerYellow.png" alt="">
+                        </div>
+                    
+                        <div class="card-content">
+                        <h1>Облегченные зерновозы бортовые 46-60 м3</h1>
+                    
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span>Объём</span>
+                                <span>46 – 60³</span>
+                            </div>
+                            <hr class="divider2">
+                            
+                            <div class="spec-row">
+                                <span>Количество осей</span>
+                                <span>3 оси</span>
+                            </div>
+        
+                            <hr class="divider2">
+                            
+                            <div class="spec-row">
+                                <span>Снаряженная масса</span>
+                                <span>от 5 900 кг</span>
+                            </div>
+
+                            <hr class="divider2">
+
+                            <div class="spec-row">
+                                <span>Стоимость</span>
+                                <div class="price">4 120 000 ₽</div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="review-card">
-                    <div class="review-image-wrapper">
+            </div>
+
+            <div class="reviews">
+                <div class="reviews-header">
+                    <h1>ОТЗЫВЫ</h1>
+                    <a href="#">Читать все отзывы</a>
+                </div>
+            
+                <div class="review-cards">
+                    <div class="review-card">
                         <img class="review-image" src="../styles/images/review.png" alt="Отзыв">
-                        <a href="#" class="arrow-link">
-                            <img src="../styles/images/svg/arrow-bg-white.svg" alt="стрелочка">
+                        
+                        <div class="review-content">
+                            <h3>Имя Фамилия / Название компании</h3>
+                            <p>Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр.</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+            
+                    <div class="review-card">
+                        <div class="review-image-wrapper">
+                            <img class="review-image" src="../styles/images/review.png" alt="Отзыв">
+                            <a href="#" class="arrow-link">
+                                <img src="../styles/images/svg/arrow-bg-white.svg" alt="стрелочка">
+                            </a>
+                        </div>
+
+                        <div class="review-content">
+                            <h3>Имя Фамилия / Название компании</h3>
+                            <p>Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая.</p>
+                        </div>
+                    </div>
+            
+                    <div class="review-card">
+                        <img class="review-image" src="../styles/images/review.png" alt="Отзыв">
+                        <div class="review-content">
+                            <h3>Имя Фамилия / Название компании</h3>
+                            <p>Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр.</p>
+                        </div>
+                    </div>                
+                </div>
+
+                <div class="review-submit-wrapper">
+                    <button class="review-submit-button">Оставить отзыв</button>
+                    <span class="button-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#202020"/>
+                            <path d="M16 32L32 16M32 16H16M32 16V32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="contact-block">
+                <div class="contact-image">
+                    <div class="contact-text">
+                        <svg class="circle" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="10" fill="white"/>
+                        </svg>
+                            
+                        <h1>ПОМОЖЕМ ПОДОБРАТЬ<br>МОДЕЛЬ И КОМПЛЕКТАЦИЮ<br>ТЕХНИКИ</h1>
+                        
+                        <p>Оставьте свои контактные данные, и наш менеджер<br>свяжется с Вами в ближайшее рабочее время</p>
+                    </div>
+                </div>
+            
+                <div class="contact-form">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Ваше имя" />
+                        <input type="text" placeholder="+7 (___) ___-__-__" />
+                        <input type="email" placeholder="Email" />
+                    </div>
+                
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="accept-input" hidden>
+                            <span class="checkbox-icon">
+                                <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                                <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                            </span>
+                            <div class="checkbox-text">
+                                Нажимая на кнопку, я принимаю условия <strong>Политики конфиденциальности</strong>
+                            </div>
+                        </label>
+                    </div>
+                
+                    <div class="contact-submit">
+                        <button class="contact-submit-button">Отправить</button>
+                        <a href="#" class="arrow-submit">
+                            <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
                         </a>
                     </div>
-
-                    <div class="review-content">
-                        <h3>Имя Фамилия / Название компании</h3>
-                        <p>Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая.</p>
-                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="information">
+                <div class="information-content">
+                    <div class="information-column-one">
+                        <div class="column-one">
+                            <div class="logo-container">
+                                <img class="braver-logo" src="../styles/images/LogoBraver.png" alt="">
+                                <p>Производство<br>полуприцепов</p>
+                            </div>
+                            
+                            <div class="search-container">
+                                <img class="search-icon" src="../styles/images/svg/Search.svg" alt="">
+                                <input class="search-input" type="text" placeholder="Поиск">
+                            </div>
+
+                            <div class="call-button-container">
+                                <button class="call-button">Заказать звонок</button>
+                            </div>
+
+                            <div class="columns-mobile">
+                                <div class="column-mobile-one">
+                                    <div class="info-container">
+                                        <div class="contacts">
+                                            <p class="info-title">Контакты:</p>
+                                            <p>8 (900) 777-77-77</p>
+                                            <p>info@braver.ru</p>
+                                        </div>
+                                
+                                        <div class="graphic">
+                                            <p class="info-title">График работы:</p>
+                                            <p>пн-пт с 9 до 18</p>
+                                        </div>
+                                
+                                        <div class="address">
+                                            <p class="info-title">Адрес:</p>
+                                            <p>г. Москва,<br>ул. Тверская 44/1, каб. 6</p>
+                                        </div>
+                                
+                                        <div class="navigator">
+                                            <a href="#">О заводе</a>
+                                            <a href="#">Новости</a>
+                                            <a href="#">Контакты</a>
+                                            <a href="#">Техника в наличии</a>
+                                            <a href="#">Доставка</a>
+                                            <a href="#">Сервисные центры</a>
+                                            <a href="#">Гарантийное обслуживание</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column-mobile-two">
+                                    <div class="navigation-container">
+                                        <a href="#">Каталог</a>
+                                        <a href="#">Сортиментовозы</a>
+                                        <a href="#">Контейнеровозы</a>
+                                        <a href="#">Зерновозы</a>
+                                        <a href="#">Бортовые</a>
+                                        <a href="#">Шторно-бортовые</a>
+                                    
+                                        <a href="#">Документы и сертификаты</a>
+                                        <a href="#">Дилеры</a>
+                                        <a href="#">Отзывы</a>
+                                        <a href="#">Вакансии</a>
+                                        <a href="#">Лизинг</a>
+                                        <a href="#">Trade-In</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="yandex-container">
+                                <div class="yandex-raiting-container">
+                                    <div class="yandex-items">
+                                        <img src="../styles/images/yandex_image.png" alt="">
+                                    
+                                        <div class="raiting-number">4,4</div>
         
-                <div class="review-card">
-                    <img class="review-image" src="../styles/images/review.png" alt="Отзыв">
-                    <div class="review-content">
-                        <h3>Имя Фамилия / Название компании</h3>
-                        <p>Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр.</p>
-                    </div>
-                </div>                
-            </div>
-
-            <div class="review-submit-wrapper">
-                <button class="review-submit-button">Оставить отзыв</button>
-                <span class="button-icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="48" height="48" rx="8" fill="#202020"/>
-                        <path d="M16 32L32 16M32 16H16M32 16V32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </span>
-            </div>
-        </div>
-
-        <div class="contact-block">
-            <div class="contact-image">
-                <div class="contact-text">
-                    <svg class="circle" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="10" fill="white"/>
-                    </svg>
-                        
-                    <h1>ПОМОЖЕМ ПОДОБРАТЬ<br>МОДЕЛЬ И КОМПЛЕКТАЦИЮ<br>ТЕХНИКИ</h1>
-                    
-                    <p>Оставьте свои контактные данные, и наш менеджер<br>свяжется с Вами в ближайшее рабочее время</p>
-                </div>
-            </div>
+                                        <div class="raiting-stars">    
+                                            <img src="../styles/images/svg/star-white.svg" alt="">
+                                            <img src="../styles/images/svg/star-white.svg" alt="">
+                                            <img src="../styles/images/svg/star-white.svg" alt="">
+                                            <img src="../styles/images/svg/star-white.svg" alt="">
+                                            <img src="../styles/images/svg/star-gray.svg" alt="">
+                                        </div>
+                                    </div>
         
-            <div class="contact-form">
-                <div class="input-wrapper">
-                    <input type="text" placeholder="Ваше имя" />
-                    <input type="text" placeholder="+7 (___) ___-__-__" />
-                    <input type="email" placeholder="Email" />
-                </div>
-            
-                <div class="checkbox-wrapper">
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="accept-input" hidden>
-                        <span class="checkbox-icon">
-                            <img src="../styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
-                            <img src="../styles/images/svg/checked_button.svg" alt="checked" class="checked">
-                        </span>
-                        <div class="checkbox-text">
-                            Нажимая на кнопку, я принимаю условия <strong>Политики конфиденциальности</strong>
-                        </div>
-                    </label>
-                </div>
-            
-                <div class="contact-submit">
-                    <button class="contact-submit-button">Отправить</button>
-                    <a href="#" class="arrow-submit">
-                        <img src="../styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                                    <div class="yandex-rate">Рейтинг организации в Яндексе</div>
+                                </div>
+                            </div>
 
-    <section class="footer">
-        <div class="information">
-            <div class="information-content">
-                <div class="information-column-one">
-                    <div class="column-one">
-                        <div class="logo-container">
-                            <img class="braver-logo" src="../styles/images/LogoBraver.png" alt="">
-                            <p>Производство<br>полуприцепов</p>
-                        </div>
-                        
-                        <div class="search-container">
-                            <img class="search-icon" src="../styles/images/svg/Search.svg" alt="">
-                            <input class="search-input" type="text" placeholder="Поиск">
-                        </div>
+                            
 
-                        <div class="call-button-container">
-                            <button class="call-button">Заказать звонок</button>
-                        </div>
+                            <div class="socials-container">
+                                <div class="social-and-lang-switch">
+                                    <div class="socials-items">
+                                        <div class="social-icon">
+                                            <img src="../styles/images/svg/vk.svg" alt="">
+                                        </div>
+                                        <div class="social-icon">
+                                            <img src="../styles/images/svg/whatsapp.svg" alt="">
+                                        </div>
+                                        <div class="social-icon">
+                                            <img src="../styles/images/svg/telegram.svg" alt="">
+                                        </div>
+                                    </div>
 
-                        <div class="columns-mobile">
-                            <div class="column-mobile-one">
-                                <div class="info-container">
-                                    <div class="contacts">
-                                        <p class="info-title">Контакты:</p>
-                                        <p>8 (900) 777-77-77</p>
-                                        <p>info@braver.ru</p>
-                                    </div>
-                            
-                                    <div class="graphic">
-                                        <p class="info-title">График работы:</p>
-                                        <p>пн-пт с 9 до 18</p>
-                                    </div>
-                            
-                                    <div class="address">
-                                        <p class="info-title">Адрес:</p>
-                                        <p>г. Москва,<br>ул. Тверская 44/1, каб. 6</p>
-                                    </div>
-                            
-                                    <div class="navigator">
-                                        <a href="#">О заводе</a>
-                                        <a href="#">Новости</a>
-                                        <a href="#">Контакты</a>
-                                        <a href="#">Техника в наличии</a>
-                                        <a href="#">Доставка</a>
-                                        <a href="#">Сервисные центры</a>
-                                        <a href="#">Гарантийное обслуживание</a>
+                                    <div class="lang-switcher-socials">
+                                        <button class="lang-button active" data-lang="ru">RU</button>
+                                        <button class="lang-button" data-lang="en">EN</button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="column-mobile-two">
-                                <div class="navigation-container">
+                            <div class="left-position">
+                                <p class="work-regions">Работаем по России и СНГ</p>
+                            </div>
+                        </div>
+
+                        <div class="column-two">
+                            <div class="info-container">
+                                <div class="contacts">
+                                    <p class="info-title">Контакты:</p>
+                                    <p>8 (900) 777-77-77</p>
+                                    <p>info@braver.ru</p>
+                                </div>
+                        
+                                <div class="graphic">
+                                    <p class="info-title">График работы:</p>
+                                    <p>пн-пт с 9 до 18</p>
+                                </div>
+                        
+                                <div class="address">
+                                    <p class="info-title">Адрес:</p>
+                                    <p>г. Москва,<br>ул. Тверская 44/1, каб. 6</p>
+                                </div>
+                        
+                                <div class="navigator">
                                     <a href="#">Каталог</a>
                                     <a href="#">Сортиментовозы</a>
                                     <a href="#">Контейнеровозы</a>
                                     <a href="#">Зерновозы</a>
                                     <a href="#">Бортовые</a>
                                     <a href="#">Шторно-бортовые</a>
-                                
-                                    <a href="#">Документы и сертификаты</a>
-                                    <a href="#">Дилеры</a>
-                                    <a href="#">Отзывы</a>
-                                    <a href="#">Вакансии</a>
-                                    <a href="#">Лизинг</a>
-                                    <a href="#">Trade-In</a>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="yandex-container">
-                            <div class="yandex-raiting-container">
-                                <div class="yandex-items">
-                                    <img src="../styles/images/yandex_image.png" alt="">
-                                
-                                    <div class="raiting-number">4,4</div>
-    
-                                    <div class="raiting-stars">    
-                                        <img src="../styles/images/svg/star-white.svg" alt="">
-                                        <img src="../styles/images/svg/star-white.svg" alt="">
-                                        <img src="../styles/images/svg/star-white.svg" alt="">
-                                        <img src="../styles/images/svg/star-white.svg" alt="">
-                                        <img src="../styles/images/svg/star-gray.svg" alt="">
-                                    </div>
-                                </div>
-    
-                                <div class="yandex-rate">Рейтинг организации в Яндексе</div>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="socials-container">
-                            <div class="social-and-lang-switch">
-                                <div class="socials-items">
-                                    <div class="social-icon">
-                                        <img src="../styles/images/svg/vk.svg" alt="">
-                                    </div>
-                                    <div class="social-icon">
-                                        <img src="../styles/images/svg/whatsapp.svg" alt="">
-                                    </div>
-                                    <div class="social-icon">
-                                        <img src="../styles/images/svg/telegram.svg" alt="">
-                                    </div>
-                                </div>
-
-                                <div class="lang-switcher-socials">
-                                    <button class="lang-button active" data-lang="ru">RU</button>
-                                    <button class="lang-button" data-lang="en">EN</button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="left-position">
-                            <p class="work-regions">Работаем по России и СНГ</p>
-                        </div>
-                    </div>
-
-                    <div class="column-two">
-                        <div class="info-container">
-                            <div class="contacts">
-                                <p class="info-title">Контакты:</p>
-                                <p>8 (900) 777-77-77</p>
-                                <p>info@braver.ru</p>
-                            </div>
-                    
-                            <div class="graphic">
-                                <p class="info-title">График работы:</p>
-                                <p>пн-пт с 9 до 18</p>
-                            </div>
-                    
-                            <div class="address">
-                                <p class="info-title">Адрес:</p>
-                                <p>г. Москва,<br>ул. Тверская 44/1, каб. 6</p>
-                            </div>
-                    
-                            <div class="navigator">
-                                <a href="#">Каталог</a>
-                                <a href="#">Сортиментовозы</a>
-                                <a href="#">Контейнеровозы</a>
-                                <a href="#">Зерновозы</a>
-                                <a href="#">Бортовые</a>
-                                <a href="#">Шторно-бортовые</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="column-three">
-                        <div class="navigation-container">
-                            <a href="#">О заводе</a>
-                            <a href="#">Новости</a>
-                            <a href="#">Контакты</a>
-                            <a href="#">Техника в наличии</a>
-                            <a href="#">Доставка</a>
-                            <a href="#">Сервисные центры</a>
-                            <a href="#">Гарантийное обслуживание</a>
-                            <a href="#">Документы и сертификаты</a>
-                            <a href="#">Дилеры</a>
-                            <a href="#">Отзывы</a>
-                            <a href="#">Вакансии</a>
-                            <a href="#">Лизинг</a>
-                            <a href="#">Trade-In</a>
-                        </div>
-                    </div>
-
-                    <div class="column-four">
-                        
-                        <div class="buttons-container">
-                            <div class="footer-buttons">
-                                <button class="call-button">Заказать звонок</button>
+                        <div class="column-three">
+                            <div class="navigation-container">
+                                <a href="#">О заводе</a>
+                                <a href="#">Новости</a>
+                                <a href="#">Контакты</a>
+                                <a href="#">Техника в наличии</a>
+                                <a href="#">Доставка</a>
+                                <a href="#">Сервисные центры</a>
+                                <a href="#">Гарантийное обслуживание</a>
+                                <a href="#">Документы и сертификаты</a>
+                                <a href="#">Дилеры</a>
+                                <a href="#">Отзывы</a>
+                                <a href="#">Вакансии</a>
+                                <a href="#">Лизинг</a>
+                                <a href="#">Trade-In</a>
                             </div>
                         </div>
 
-                        <div class="lang-switcher-call">
-                            <button class="lang-button active" data-lang="ru">RU</button>
-                            <button class="lang-button" data-lang="en">EN</button>
-                        </div>
+                        <div class="column-four">
+                            
+                            <div class="buttons-container">
+                                <div class="footer-buttons">
+                                    <button class="call-button">Заказать звонок</button>
+                                </div>
+                            </div>
 
-                        <p>Работаем по России и СНГ</p>
+                            <div class="lang-switcher-call">
+                                <button class="lang-button active" data-lang="ru">RU</button>
+                                <button class="lang-button" data-lang="en">EN</button>
+                            </div>
+
+                            <p>Работаем по России и СНГ</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="imforamtion-images">
-                <div class="information-main-img">
-                    <img src="../styles/images/info@braver.ru.png" alt="">
+        
+                <div class="imforamtion-images">
+                    <div class="information-main-img">
+                        <img src="../styles/images/info@braver.ru.png" alt="">
+                    </div>
+                </div>
+
+                <div class="information-texts">
+                    <p class="omni">Сделано в OMNI</p>
+                    <p>© 2024 BRAVER</p>
+                    <p>Политика конфиденциальности</p>
+                </div>
+
+                <div class="information-texts omni-hidden">
+                    <p>Сделано в OMNI</p>
                 </div>
             </div>
-
-            <div class="information-texts">
-                <p class="omni">Сделано в OMNI</p>
-                <p>© 2024 BRAVER</p>
-                <p>Политика конфиденциальности</p>
-            </div>
-
-            <div class="information-texts omni-hidden">
-                <p>Сделано в OMNI</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     
-    
+    <!-- БУРГЕР -->
 
-    <script src="../styles/script.js"></script>
+    <!-- БУРГЕР -->
+    <div class="wrapper" style="display: none;">
+        <header>
+          <div class="header-container">
+            <div class="logo-and-desc">
+              <div class="left">
+                <a href="../pages/MainPage.html">
+                    <img class="logo" src="../styles/images/svg/logo.svg" alt="" />
+                </a>
+                <p>Производство<br />полуприцепов</p>
+              </div>
+              <div class="right">
+                <button class="close-btn" aria-label="Close">
+                  <img class="close-img" src="../styles/images/svg/close-gray.svg" alt="close"/>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+    
+        <main>
+          <div class="navigate-items">
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Каталог</div>
+                  <div class="navigate-icon">
+                    <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="../pages/ProductCard.html" class="sub-item">Зерновозы</a>
+                    <a href="#" class="sub-item">Полуприцепы</a>
+                    <a href="#" class="sub-item">Самосвалы</a>
+                    <a href="#" class="sub-item">Фургоны</a>
+                </div>
+            </button>
+    
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">О заводе</div>
+                  <div class="navigate-icon">
+                    <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="#" class="sub-item">История</a>
+                    <a href="#" class="sub-item">Производство</a>
+                </div>
+            </button>
+    
+            <a href="#" class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Техника в наличии</div>
+                  <div class="navigate-icon">
+                    <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+            </a>
+    
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Сервис и гарантия</div>
+                  <div class="navigate-icon">
+                    <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="#" class="sub-item">Отзывы</a>
+                    <a href="#" class="sub-item">Гарантийное обслуживание</a>
+                    <a href="#" class="sub-item">Доставка</a>
+                    <a href="#" class="sub-item">Документы и сертификаты</a>
+                    <a href="#" class="sub-item">Сервисные центры</a>
+                </div>
+            </button>
+    
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Покупателям</div>
+                  <div class="navigate-icon">
+                    <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="#" class="sub-item">Лизинг</a>
+                    <a href="#" class="sub-item">Кредит</a>
+                </div>
+            </button>
+    
+            <a href="#" class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Контакты</div>
+                  <div class="navigate-icon">
+                    <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+            </a>
+          </div>
+        </main>
+    
+        <footer class="contact-footer">
+          <div class="contact-container">
+            <div class="phone-and-lang">
+                <span class="phone-burger">8 (900) 777-77-77</span>
+                <div class="lang-switcher-burger">
+                    <button class="lang-button-burger active" data-lang="ru">RU</button>
+                    <button class="lang-button-burger" data-lang="en">EN</button>
+                </div>
+            </div>
+            <button class="callback-btn">Заказать звонок</button>
+          </div>
+        </footer>
+    </div>
+
+    <script src="../styles/scriptpProduct.js"></script>
 </body>
 </html>

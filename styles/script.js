@@ -24,6 +24,40 @@ function switchTab(tabId) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const expandableItems = document.querySelectorAll('.navigate-item.expandable');
+
+    const activeSvg = `
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="2.36486" cy="2.5" rx="2.36486" ry="2.5" fill="#202020"/>
+        </svg>
+    `;
+    const defaultImgSrc = "../styles/images/svg/Ellipse.svg";
+
+    expandableItems.forEach(item => {
+        const content = item.querySelector('.navigate-content');
+        const iconWrapper = item.querySelector('.navigate-icon');
+
+        content.addEventListener('click', () => {
+        const isAlreadyActive = item.classList.contains('active');
+
+        // Сначала сворачиваем все
+        expandableItems.forEach(otherItem => {
+            otherItem.classList.remove('active');
+            const otherIcon = otherItem.querySelector('.navigate-icon');
+            if (otherIcon) {
+            otherIcon.innerHTML = `<img src="${defaultImgSrc}" alt="icon" />`;
+            }
+        });
+
+        // Если текущий раньше не был активен — активируем его
+        if (!isAlreadyActive) {
+            item.classList.add('active');
+            iconWrapper.innerHTML = activeSvg;
+        }
+        });
+    });
+
+
     // Переключение языка
     const buttons = document.querySelectorAll(".lang-button");
 
@@ -34,18 +68,39 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Переключение языка бургера
+
+    const buttonsBurger = document.querySelectorAll(".lang-button-burger");
+
+    // Переключение языка
+    buttonsBurger.forEach(button => {
+        // Слушаем оба события: click и touchstart
+        button.addEventListener("click", () => {
+            buttonsBurger.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+        });
+        
+        button.addEventListener("touchstart", () => {
+            buttonsBurger.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+        });
+    });
+
     // Функциональность бургер-меню
     const burger = document.querySelector(".burger");
-    const nav = document.querySelector(".nav");
-    const contact = document.querySelector(".contact");
+    const mainPage = document.querySelector(".main-page");
+    const burgerWrapper = document.querySelector(".wrapper");
+    const closeBtn = document.querySelector(".close-btn");
 
-    if (burger) {
-        burger.addEventListener("click", () => {
-            burger.classList.toggle("active");
-            nav.classList.toggle("active");
-            contact.classList.toggle("active");
-        });
-    }
+    burger.addEventListener("click", () => {
+      mainPage.style.display = "none";
+      burgerWrapper.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      burgerWrapper.style.display = "none";
+      mainPage.style.display = "flex";
+    });
 
     // Обработка кликов по пунктам меню с точками
     const navItems = document.querySelectorAll(".nav-item > a");

@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../styles/fonts/HelveticaNeue-Light.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-and-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    width: 38px;
+    height: 38px;
+    padding: 12px;
+    background-color: rgba(32, 32, 32, 0.03);
+    border-radius: 8px;
+}
+
+.logo-and-desc p {
+    font-size: 10px;
+    color: black;
+}
+
+.navigate-items {
+    padding: 12px;
+}
+
+.navigate-items a {
+    text-decoration: none;
+}
+
+.navigate-item {
+    display: block;
+    padding: 5px 0;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.navigate-item:focus {
+    outline: none;
+}
+
+.navigate-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    opacity: 0.1;
+}
+
+.navigate-item .navigate-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.navigate-content img {
+    width: 5px;
+    height: 5px;
+}
+
+.contact-footer {
+    background-color: #fff;
+    padding: 16px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.phone-and-lang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.phone {
+    font-size: 16px;
+}
+
+
+
+/* Выбор языка */
+
+.lang-switcher {
+    display: flex;
+    background-color: rgba(32, 32, 32, 0.03); 
+    border-radius: 12px;
+}
+
+.lang-button {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    color: rgba(123, 123, 123, 1);
+    background: transparent;
+    border: none; 
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    flex: 1; 
+    border-radius: 12px; 
+}
+
+.lang-button.active {
+    font-weight: 400;
+    background-color: black; 
+    color: white;
+}
+
+.lang-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+.callback-btn {
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navigate-item .navigate-name {
+    font-size: 18px;
+    color: rgba(32, 32, 32, 1);
+}
+
+  
+.navigate-item.active .navigate-name {
+    font-weight: 700;
+    color: #000;
+}
+
+.sub-items {
+    display: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-items a {
+    text-decoration: none;
+}
+
+.sub-item {
+    color: rgba(123, 123, 123, 1);
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sub-item:hover {
+    background-color: #000;
+    color: #fff;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.navigate-item.active .sub-items {
+    display: flex;
+}

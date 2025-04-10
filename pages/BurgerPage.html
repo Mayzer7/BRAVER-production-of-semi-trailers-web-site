@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../pages/burgerstyle.css"/>
+  <title>Test</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-container">
+        <div class="logo-and-desc">
+          <div class="left">
+            <img class="logo" src="../styles/images/svg/logo.svg" alt="" />
+            <p>Производство<br />полуприцепов</p>
+          </div>
+          <div class="right">
+            <button class="close-btn" aria-label="Close">
+              <img class="close" src="../styles/images/svg/close-gray.svg" alt="close"/>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="navigate-items">
+        <button class="navigate-item expandable">
+            <div class="navigate-content">
+              <div class="navigate-name">Каталог</div>
+              <div class="navigate-icon">
+                <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+              </div>
+            </div>
+            <div class="navigate-line"></div>
+            <div class="sub-items">
+                <a href="#" class="sub-item">Зерновозы</a>
+                <a href="#" class="sub-item">Полуприцепы</a>
+                <a href="#" class="sub-item">Самосвалы</a>
+                <a href="#" class="sub-item">Фургоны</a>
+            </div>
+        </button>
+
+        <button class="navigate-item expandable">
+            <div class="navigate-content">
+              <div class="navigate-name">О заводе</div>
+              <div class="navigate-icon">
+                <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+              </div>
+            </div>
+            <div class="navigate-line"></div>
+            <div class="sub-items">
+                <a href="#" class="sub-item">История</a>
+                <a href="#" class="sub-item">Производство</a>
+            </div>
+        </button>
+
+        <a href="#" class="navigate-item expandable">
+            <div class="navigate-content">
+              <div class="navigate-name">Техника в наличии</div>
+              <div class="navigate-icon">
+                <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+              </div>
+            </div>
+            <div class="navigate-line"></div>
+        </a>
+
+        <button class="navigate-item expandable">
+            <div class="navigate-content">
+              <div class="navigate-name">Сервис и гарантия</div>
+              <div class="navigate-icon">
+                <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+              </div>
+            </div>
+            <div class="navigate-line"></div>
+            <div class="sub-items">
+                <a href="#" class="sub-item">Отзывы</a>
+                <a href="#" class="sub-item">Гарантийное обслуживание</a>
+                <a href="#" class="sub-item">Доставка</a>
+                <a href="#" class="sub-item">Документы и сертификаты</a>
+                <a href="#" class="sub-item">Сервисные центры</a>
+            </div>
+        </button>
+
+        <button class="navigate-item expandable">
+            <div class="navigate-content">
+              <div class="navigate-name">Покупателям</div>
+              <div class="navigate-icon">
+                <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+              </div>
+            </div>
+            <div class="navigate-line"></div>
+            <div class="sub-items">
+                <a href="#" class="sub-item">Лизинг</a>
+                <a href="#" class="sub-item">Кредит</a>
+            </div>
+        </button>
+
+        <a href="#" class="navigate-item expandable">
+            <div class="navigate-content">
+              <div class="navigate-name">Контакты</div>
+              <div class="navigate-icon">
+                <img src="../styles/images/svg/Ellipse.svg" alt="icon" />
+              </div>
+            </div>
+            <div class="navigate-line"></div>
+        </a>
+      </div>
+    </main>
+
+    <footer class="contact-footer">
+      <div class="contact-container">
+        <div class="phone-and-lang">
+            <span class="phone">8 (900) 777-77-77</span>
+            <div class="lang-switcher">
+                <button class="lang-button active" data-lang="ru">RU</button>
+                <button class="lang-button" data-lang="en">EN</button>
+            </div>
+        </div>
+        <button class="callback-btn">Заказать звонок</button>
+        
+      </div>
+    </footer>
+  </div>
+
+  <script src="../pages/burger.js"></script>
+</body>
+</html>

@@ -31,7 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <ellipse cx="2.36486" cy="2.5" rx="2.36486" ry="2.5" fill="#202020"/>
         </svg>
     `;
-    const defaultImgSrc = "styles/images/svg/Ellipse.svg";
+    const defaultImgSrc = `
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="2.5" cy="2.5" r="2.5" fill="#E5E5E5"/>
+        </svg>
+    `;
 
     expandableItems.forEach(item => {
         const content = item.querySelector('.navigate-content');

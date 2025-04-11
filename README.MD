@@ -15,3 +15,17 @@
 
 # Мобильная версия:
 
+![Image](https://github.com/user-attachments/assets/7328a831-62dd-4815-b4f2-3b1531ab6903)
+![Image](https://github.com/user-attachments/assets/a191bcb8-1210-45a7-98c1-365556f6b5fe)
+![Image](https://github.com/user-attachments/assets/a78ed08e-65be-45b8-9d19-792e51461d2c)
+![Image](https://github.com/user-attachments/assets/153a3ace-6d48-49f3-8fa5-bb2d3dc5b88b)
+![Image](https://github.com/user-attachments/assets/d78cd0c9-5487-4c4d-89b9-0cd81485f03f)
+![Image](https://github.com/user-attachments/assets/adfd7bf6-4876-49d7-b4b5-51194d871768)
+![Image](https://github.com/user-attachments/assets/907f463a-42d0-4a7c-a044-ca51855bf477)
+![Image](https://github.com/user-attachments/assets/c236e4d5-9bef-4c63-beda-825ef0b1f5f9)
+![Image](https://github.com/user-attachments/assets/b1680afd-b307-4b62-9912-caaa8a3549f5)
+![Image](https://github.com/user-attachments/assets/f9d3c97a-f40b-4026-bd5c-21eca3833c68)
+![Image](https://github.com/user-attachments/assets/9b4ddf95-59fc-4a45-a36b-4b97415ededd)
+![Image](https://github.com/user-attachments/assets/cc7ee695-abe5-457b-8d33-2033076fe73d)
+![Image](https://github.com/user-attachments/assets/b51e8c11-ff3f-4cae-b9cd-cc9eff625c24)
+

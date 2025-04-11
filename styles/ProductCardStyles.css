@@ -1496,6 +1496,24 @@ body {
     gap: 15px;
 }
 
+
+.input-wrapper input {
+    flex: 1; 
+    min-width: 253px;
+    min-height: 46px;
+    line-height: 1.4;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: white; 
+    outline: none;
+    transition: 0.3s ease-in-out;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    
+}
+
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
     font-family: 'Helvetica Neue';
@@ -2544,6 +2562,7 @@ main {
     flex: 1; 
     min-width: 253px;
     min-height: 46px;
+    line-height: 1.4;
     padding: 12px;
     font-size: 16px;
     border: none;
@@ -2691,6 +2710,7 @@ main {
     min-width: 253px;
     min-height: 46px;
     padding: 12px;
+    line-height: 1.4;
     font-size: 16px;
     border: none;
     border-radius: 8px;

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/HomePageStyles.css">
+    <title>BRAVER production - Главная страница</title>
+</head>
+<body>
+    <section class="main-page">
+        <header class="header">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="styles/images/LogoBraver.png" alt="Логотип">
+                </a>
+                <span>Производство<br>полуприцепов</span>
+            </div>
+
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="#" class="catalog-btn">Каталог <span class="dot">•</span></a>
+                    <div class="dropdown">
+                        <a href="pages/ProductCard.html">Зерновозы</a>
+                        <a href="pages/ProductCard.html">Полуприцепы</a>
+                        <a href="pages/ProductCard.html">Самосвалы</a>
+                        <a href="pages/ProductCard.html">Фургоны</a>
+                    </div>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="#">О заводе <span class="dot">•</span></a>
+                    <div class="dropdown">
+                        <a href="pages/ProductCard.html">История</a>
+                        <a href="pages/ProductCard.html">Производство</a>
+                    </div>
+                </div>
+            
+                <a href="#">Техника в наличии</a>
+                
+                <div class="nav-item">
+                    <a href="#">Сервис и гарантия <span class="dot">•</span></a>
+                    <div class="dropdown">
+                        <a href="pages/ProductCard.html">Отзывы</a>
+                        <a href="pages/ProductCard.html">Гарантийное обслуживание</a>
+                        <a href="pages/ProductCard.html">Доставка</a>
+                        <a href="pages/ProductCard.html">Документы и сертификаты</a>
+                        <a href="pages/ProductCard.html">Сервисные центры</a>
+                    </div>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="#">Покупателям <span class="dot">•</span></a>
+                    <div class="dropdown">
+                        <a href="pages/ProductCard.html">Лизинг</a>
+                        <a href="pages/ProductCard.html">Кредит</a>
+                    </div>
+                </div>
+            
+                <a href="#">Контакты</a>
+            </nav>
+            <div class="contact">
+                <span>8 (900) 777-77-77</span>
+                <button class="contact-button">Заказать звонок</button>
+                <div class="lang-switcher">
+                    <button class="lang-button active" data-lang="ru">RU</button>
+                    <button class="lang-button" data-lang="en">EN</button>
+                </div>
+            </div>
+
+            <div class="burger">
+                <span></span>
+                <span></span>   
+                <span></span>
+            </div>
+        </header>
+
+        <div class="main-page-content">
+            <div class="title">
+                РАЗРАБОТАНА НОВАЯ<br> МОДЕЛЬ СОРТИМЕНТОВОЗА
+            </div>
+        
+            <div class="subtitle">
+                <div class="description">
+                    Производим полуприцепы и спецтехнику различного<br>назначения: сортиментовозы, контейнеровозы,<br>зерновозы, бортовые, шторно-бортовые
+                </div>
+        
+                <div class="submit-app">
+                    <a href="#" class="request-button">Оставить заявку</a>
+                    <a href="#" class="arrow-link">
+                        <img src="styles/images/svg/arrow-bg-white.svg" alt="стрелочка">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БУРГЕР -->
+    <div class="wrapper" style="display: none;">
+        <header>
+          <div class="header-container">
+            <div class="logo-and-desc">
+              <div class="left">
+                <a href="../pages/MainPage.html">
+                    <img class="logo" src="styles/images/svg/logo.svg" alt="" />
+                </a>
+                <p>Производство<br />полуприцепов</p>
+              </div>
+              <div class="right">
+                <button class="close-btn" aria-label="Close">
+                  <img class="close-img" src="styles/images/svg/close-gray.svg" alt="close"/>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+    
+        <main>
+          <div class="navigate-items">
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Каталог</div>
+                  <div class="navigate-icon">
+                    <img src="styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="pages/ProductCard.html" class="sub-item">Зерновозы</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Полуприцепы</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Самосвалы</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Фургоны</a>
+                </div>
+            </button>
+    
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">О заводе</div>
+                  <div class="navigate-icon">
+                    <img src="styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="pages/ProductCard.html" class="sub-item">История</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Производство</a>
+                </div>
+            </button>
+    
+            <a href="#" class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Техника в наличии</div>
+                  <div class="navigate-icon">
+                    <img src="styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+            </a>
+    
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Сервис и гарантия</div>
+                  <div class="navigate-icon">
+                    <img src="styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="pages/ProductCard.html" class="sub-item">Отзывы</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Гарантийное обслуживание</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Доставка</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Документы и сертификаты</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Сервисные центры</a>
+                </div>
+            </button>
+    
+            <button class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Покупателям</div>
+                  <div class="navigate-icon">
+                    <img src="styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+                <div class="sub-items">
+                    <a href="pages/ProductCard.html" class="sub-item">Лизинг</a>
+                    <a href="pages/ProductCard.html" class="sub-item">Кредит</a>
+                </div>
+            </button>
+    
+            <a href="#" class="navigate-item expandable">
+                <div class="navigate-content">
+                  <div class="navigate-name">Контакты</div>
+                  <div class="navigate-icon">
+                    <img src="styles/images/svg/Ellipse.svg" alt="icon" />
+                  </div>
+                </div>
+                <div class="navigate-line"></div>
+            </a>
+          </div>
+        </main>
+    
+        <footer class="contact-footer">
+          <div class="contact-container">
+            <div class="phone-and-lang">
+                <span class="phone-burger">8 (900) 777-77-77</span>
+                <div class="lang-switcher-burger">
+                    <button class="lang-button-burger active" data-lang="ru">RU</button>
+                    <button class="lang-button-burger" data-lang="en">EN</button>
+                </div>
+            </div>
+            <button class="callback-btn">Заказать звонок</button>
+          </div>
+        </footer>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Заказать звонок" -->
+    <div id="modal-call" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="styles/images/svg/close.svg" alt=""></span>
+            <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+            <p>Оставьте телефон, и мы свяжемся с Вами в течение 15 минут</p>
+            <div class="modal-inputs">
+                <input type="text" placeholder="+7 (___) ___-__-__">
+                <input type="text" placeholder="Название компании">
+            </div>
+            <label class="custom-checkbox">
+                <input type="checkbox" class="accept-input" hidden>
+                
+                <span class="checkbox-icon">
+                    <img src="styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                    <img src="styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                </span>
+
+                <div class="checkbox-text">
+                    Нажимая на кнопку, я принимаю условия <strong>Политики<br> конфиденциальности</strong>
+                </div>
+            </label>
+            <div class="submit-modal">
+                <a href="#" class="submit-button-modal">Отправить</a>
+                <a href="#" class="arrow-link-modal">
+                    <img src="styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Всплывающее Модальное окно "Оставить заявку" -->
+    <div id="modal-req" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="styles/images/svg/close.svg" alt=""></span>
+            <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
+            <p>Оставьте Ваши данные, и мы свяжемся с вами в течение 15 минут</p>
+            <form id="modal-call-form">
+                <div class="modal-inputs-req">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя">
+                    <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <textarea id="comment" name="comment" placeholder="Ваш комментарий"></textarea>
+                </div>
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="accept-input" id="accept-policy" hidden>
+                    <span class="checkbox-icon">
+                        <img src="styles/images/svg/unchecked_button.svg" alt="unchecked" class="unchecked">
+                        <img src="styles/images/svg/checked_button.svg" alt="checked" class="checked">
+                    </span>
+                    <div class="checkbox-text">
+                        Нажимая на кнопку, я принимаю условия <strong>Политики конфиденциальности</strong>
+                    </div>
+                </label>
+                <div class="submit-modal">
+                    <a href="#" class="submit-button-modal">Отправить</a>
+                    <a href="#" class="arrow-link-modal">
+                        <img src="styles/images/svg/arrow-bg-black.svg" alt="стрелочка">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- модальное окно при успешной отправки формы -->
+    <div id="modal-success" class="modal">
+        <div class="modal-content-success">
+            <span class="close"><img src="styles/images/svg/close.svg" alt=""></span>
+            <img class="like" src="styles/images/Like.png" alt="">
+            <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
+            <p>Наш менеджер свяжется с Вами в течение 15 минут</p>
+            <div class="submit-modal-success">
+                <a href="#" class="submit-button-modal-success">Закрыть</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно ошибки -->
+    <div id="modal-error" class="modal">
+        <div class="modal-content-error">
+            <span class="close"><img src="styles/images/svg/close.svg" alt=""></span>
+            <img class="error" src="styles/images/Error.png" alt="">
+            <h2>ЧТО-ТО ПОШЛО НЕ ТАК</h2>
+            <p>Попробуйте отправить заявку еще раз</p>
+            <div class="submit-modal-error">
+                <a href="#" class="submit-button-modal-error">Заполнить форму</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="styles/scriptMain.js"></script>
+</body>
+</html>

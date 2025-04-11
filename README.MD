@@ -1,10 +1,10 @@
-## 🌐 Верстка сайта по макету BRAVER
-# Адаптивная верстка под все устройства (десктоп, планшет, мобильный)
+# 🌐 Верстка сайта по макету BRAVER
+## Адаптивная верстка под все устройства (десктоп, планшет, мобильный)
 
-# Посмотреть сайт можно по ссылке:
-# https://mayzer7.github.io/BRAVER-production-of-semi-trailers-web-site/
+## Посмотреть сайт можно по ссылке:
+## https://mayzer7.github.io/BRAVER-production-of-semi-trailers-web-site/
 
-# Десктоп версия:
+## Десктоп версия:
 
 ![Image](https://github.com/user-attachments/assets/b5d9a440-90ad-4908-b77d-1e892a3daa0b)
 ![Image](https://github.com/user-attachments/assets/0cba7974-cc3c-4ed5-9b91-2a4d2294664e)
@@ -16,7 +16,7 @@
 ![Image](https://github.com/user-attachments/assets/ef1680cf-199d-498c-b9ca-0648d450d00f)
 ![Image](https://github.com/user-attachments/assets/d8b4797f-91a1-476a-af41-9e3c943a9b20)
 
-# Мобильная версия:
+## Мобильная версия:
 
 ![Image](https://github.com/user-attachments/assets/7328a831-62dd-4815-b4f2-3b1531ab6903)
 ![Image](https://github.com/user-attachments/assets/a191bcb8-1210-45a7-98c1-365556f6b5fe)

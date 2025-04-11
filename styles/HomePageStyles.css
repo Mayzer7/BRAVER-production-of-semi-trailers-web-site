@@ -19,9 +19,9 @@
 }
 
 html, body {
-    height: 100%; /* Обеспечиваем, что тело страницы будет иметь полную высоту */
-    overflow-x: auto; /* Включаем горизонтальную прокрутку */
-    overflow-y: hidden; /* Отключаем вертикальную прокрутку, если она не нужна */
+    height: 100%;
+    overflow-x: auto; 
+    overflow-y: hidden; 
 }
 
 .main-page {

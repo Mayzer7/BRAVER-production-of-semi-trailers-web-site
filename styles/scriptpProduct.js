@@ -3,10 +3,10 @@ function switchTab(tabId) {
 
     tabs.forEach(tab => {
         if (tab.id === tabId) {
-            tab.classList.remove('hidden'); // Показываем выбранный блок
+            tab.classList.remove('hidden'); 
             tab.classList.add('active');
         } else {
-            tab.classList.add('hidden'); // Скрываем остальные блоки
+            tab.classList.add('hidden'); 
             tab.classList.remove('active');
         }
     });
@@ -189,17 +189,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const arrowOpen = toggleBtn.querySelector(".arrow-open");
 
         if (item.classList.contains("active")) {
-            arrowClosed.style.display = "none"; // Скрыть стрелку закрытого состояния
-            arrowOpen.style.display = "block"; // Показать стрелку открытого состояния
+            arrowClosed.style.display = "none"; 
+            arrowOpen.style.display = "block"; 
         } else {
-            arrowClosed.style.display = "block"; // Показать стрелку закрытого состояния
-            arrowOpen.style.display = "none"; // Скрыть стрелку открытого состояния
+            arrowClosed.style.display = "block"; 
+            arrowOpen.style.display = "none"; 
         }
         });
     });
-
-
-
 
     // Универсальная функция открытия модалки
     function openModal(modal) {
@@ -278,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // === Форма "Заказать звонок" ===
+    // Форма "Заказать звонок" 
     const submitButton = document.querySelector('.submit-button-modal');
     const phoneInput = modalCall.querySelector('input[placeholder^="+7"]');
     const companyInput = modalCall.querySelector('input[placeholder="Название компании"]');
@@ -298,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // === Форма "Оставить заявку" ===
+    // Форма "Оставить заявку"
     const nameInput = document.getElementById('name');
     const phoneReqInput = document.getElementById('phone');
     const emailInput = document.getElementById('email');
@@ -320,5 +317,52 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             openModal(modalSuccess);
         }
+    });
+
+
+
+
+    // Обработка формы на странице (подбор модели) 
+    const contactForm = document.querySelector('.contact-form');
+    const contactInputs = contactForm.querySelectorAll('input[type="text"], input[type="email"]');
+    const contactCheckbox = contactForm.querySelector('.accept-input');
+    const contactSubmitButton = contactForm.querySelector('.contact-submit-button');
+
+    // Обработка кнопки отправки
+    contactSubmitButton.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const allFilled = [...contactInputs].every(input => input.value.trim() !== '');
+        const agreed = contactCheckbox.checked;
+
+        if (allFilled && agreed) {
+            openModal(modalSuccess);
+        } else {
+            lastForm = null; // форма не имеет модалки, никуда возвращать не нужно
+            openModal(modalError);
+        }
+    });
+
+    // При ошибке просто закрыть модалку ошибки без возврата
+    errorRetryBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!lastForm) {
+            closeModal(modalError);
+        } else {
+            if (lastForm === 'call') openModal(modalCall);
+            if (lastForm === 'req') openModal(modalReq);
+        }
+    });
+
+    // Закрытие модалок "Ошибка" и "Успешно" по крестику
+    const closeErrorModal = modalError.querySelector('.close');
+    const closeSuccessModal = modalSuccess.querySelector('.close');
+
+    closeErrorModal.addEventListener('click', () => {
+        closeModal(modalError);
+    });
+
+    closeSuccessModal.addEventListener('click', () => {
+        closeModal(modalSuccess);
     });
 });

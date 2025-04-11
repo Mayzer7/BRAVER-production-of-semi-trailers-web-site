@@ -3,10 +3,10 @@ function switchTab(tabId) {
 
     tabs.forEach(tab => {
         if (tab.id === tabId) {
-            tab.classList.remove('hidden'); // Показываем выбранный блок
+            tab.classList.remove('hidden'); 
             tab.classList.add('active');
         } else {
-            tab.classList.add('hidden'); // Скрываем остальные блоки
+            tab.classList.add('hidden'); 
             tab.classList.remove('active');
         }
     });
@@ -153,12 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!modal || !openModalBtn) return;
     
         openModalBtn.addEventListener("click", () => {
-            // Закрываем бургер, если есть кнопка
             if (burgerCloseBtn) {
                 burgerCloseBtn.click();
             }
     
-            // Ждём (если нужно), потом показываем модалку
             setTimeout(() => {
                 modal.style.display = "flex";
                 document.body.style.overflow = "hidden";
@@ -183,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // "Заказать звонок" в бургер-меню (с закрытием бургера)
     setupModal("modal-call", "callback-btn", {
-        burgerCloseButtonSelector: ".close-btn", // <— вот твоя кнопка
+        burgerCloseButtonSelector: ".close-btn",
     });
 
     // "Оставить заявку"
@@ -237,21 +235,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const arrowOpen = toggleBtn.querySelector(".arrow-open");
 
         if (item.classList.contains("active")) {
-            arrowClosed.style.display = "none"; // Скрыть стрелку закрытого состояния
-            arrowOpen.style.display = "block"; // Показать стрелку открытого состояния
+            arrowClosed.style.display = "none"; 
+            arrowOpen.style.display = "block";
         } else {
-            arrowClosed.style.display = "block"; // Показать стрелку закрытого состояния
-            arrowOpen.style.display = "none"; // Скрыть стрелку открытого состояния
+            arrowClosed.style.display = "block"; 
+            arrowOpen.style.display = "none"; 
         }
         });
     });
-    
-
-    
-
-
-    
-
     
     // Модальные окна
     const modalCall = document.getElementById("modal-call"); // Заказать звонок
@@ -297,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Получаем значения полей
         const phone = document.querySelector("input[type='text']:first-of-type").value.trim(); // Телефон
         const companyName = document.querySelector("input[type='text']:last-of-type").value.trim(); // Название компании
-        const acceptPolicy = document.querySelector(".accept-input").checked; // Чекбокс согласия
+        const acceptPolicy = document.querySelector(".accept-input").checked; // Чекбокс согласия с политикой
 
         // Проверка обязательных полей
         if (!phone || !companyName || !acceptPolicy) {

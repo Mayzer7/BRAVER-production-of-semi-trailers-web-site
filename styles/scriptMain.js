@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const activeSvg = `
         <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="2.36486" cy="2.5" rx="2.36486" ry="2.5" fill="#202020"/>
+            <ellipse cx="2.36486" cy="2.5" rx="2.36486" ry="2.5" fill="#202020"/>
         </svg>
     `;
-    const defaultImgSrc = `
+    const defaultSvg = `
         <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="2.5" cy="2.5" r="2.5" fill="#E5E5E5"/>
         </svg>
@@ -42,22 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const iconWrapper = item.querySelector('.navigate-icon');
 
         content.addEventListener('click', () => {
-        const isAlreadyActive = item.classList.contains('active');
+            const isAlreadyActive = item.classList.contains('active');
 
-        // Сначала сворачиваем все
-        expandableItems.forEach(otherItem => {
-            otherItem.classList.remove('active');
-            const otherIcon = otherItem.querySelector('.navigate-icon');
-            if (otherIcon) {
-            otherIcon.innerHTML = `<img src="${defaultImgSrc}" alt="icon" />`;
+            // Сначала сворачиваем все
+            expandableItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                const otherIcon = otherItem.querySelector('.navigate-icon');
+                if (otherIcon) {
+                    otherIcon.innerHTML = defaultSvg;
+                }
+            });
+
+            // Если текущий раньше не был активен — активируем его
+            if (!isAlreadyActive) {
+                item.classList.add('active');
+                iconWrapper.innerHTML = activeSvg;
             }
-        });
-
-        // Если текущий раньше не был активен — активируем его
-        if (!isAlreadyActive) {
-            item.classList.add('active');
-            iconWrapper.innerHTML = activeSvg;
-        }
         });
     });
 
